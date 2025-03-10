@@ -1,0 +1,4264 @@
+@media only screen and (min-width: 1600px) {
+  .container {
+    max-width: 1665px;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  .owl-carousel .owl-nav button {
+    display: none;
+  }
+  header form {
+    width: 290px;
+  }
+  header .menu--search--wrapp {
+    gap: 40px;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .testimonial--area {
+    padding-left: calc((100% - 1570px) / 2 + 15px);
+  }
+}
+
+@media only screen and (max-width: 1599px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .menu--search--wrapp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--body-color);
+    display: block !important;
+    padding-top: 135px;
+    padding-left: calc((100% - 1345px) / 2 + 15px);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+  .menu--search--wrapp.current {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header--right .login-btn {
+    display: none;
+  }
+  header .menu {
+    display: block;
+  }
+  header .menu li a {
+    margin-top: 16px;
+  }
+  header form {
+    width: 335px;
+    margin-top: 30px;
+  }
+  header form input {
+    background-color: rgb(255 240 235 / 89%);
+  }
+  header {
+    padding: 26px 0;
+  }
+  .sec--title {
+    font-size: 38px;
+    line-height: normal;
+  }
+  .hero--area {
+    padding: 160px 0 100px;
+  }
+  .hero--slider .featured--car {
+    height: 474px;
+  }
+  .slider-right-box img,
+  .more--photos--box {
+    height: 227px;
+  }
+  .mobile--login--btn {
+    display: block !important;
+  }
+  .mobile--logout--btn {
+    display: block !important;
+  }
+  .mobile--login--btn a {
+    display: inline-block;
+    padding: 10px 28px;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    font-family: var(--font-outfit);
+    line-height: normal;
+    color: var(--white) !important;
+  }
+  .mobile--logout--btn a {
+    display: inline-block;
+    padding: 10px 28px;
+    color: var(--primary-color) !important;
+    background-color: transparent !important;;
+    border: 1px solid var(--primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    font-family: var(--font-outfit);
+    line-height: normal;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+  .container {
+    max-width: 1345px;
+  }
+  .action--ending--soon {
+    padding-left: 24px;
+  }
+  .details--and--morearea .car-details-table--wrapper .title h3,
+  .action--ending--soon h3 {
+    font-size: 26px;
+    line-height: normal;
+  }
+  .table--wrapper {
+    display: block;
+  }
+  .table--wrapper .table {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .table--wrapper .table:last-child {
+    border-left: 1px solid rgba(90, 92, 95, 0.4);
+    border-top: 0;
+  }
+  .hero--area .section--title.mb_35 {
+    margin-bottom: 20px;
+  }
+  .sec--title {
+    font-size: 36px;
+  }
+  .owl-nav button {
+    left: -50px;
+  }
+  .owl-nav .owl-next {
+    right: -50px;
+  }
+  .hero--area {
+    padding: 160px 0 70px;
+  }
+  .hero--slider .featured--car h3 {
+    font-size: 23px;
+  }
+  .car--card .img--area {
+    height: 200px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 38px;
+  }
+  .testimonial--area {
+    padding-left: calc((100% - 1345px) / 2 + 15px);
+  }
+  .testimonial--card {
+    padding: 40px;
+  }
+  .single--car--hero .name--area h1 {
+    font-size: 26px;
+    margin-bottom: 2px;
+  }
+  .single--car--hero .name--area p {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1439px) {
+  .hero--area .section--title.mb_35 {
+    margin-bottom: 20px;
+  }
+  .sec--title {
+    font-size: 36px;
+  }
+  .owl-nav button {
+    left: -50px;
+  }
+  .owl-nav .owl-next {
+    right: -50px;
+  }
+  .hero--area {
+    padding: 160px 0 70px;
+  }
+  .hero--slider .featured--car h3 {
+    font-size: 23px;
+    width: 100%;
+  }
+  .car--card .img--area {
+    height: 200px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 38px;
+  }
+  .testimonial--area {
+    padding-left: calc((100% - 1140px) / 2 + 15px) !important;
+  }
+  .testimonial--card {
+    padding: 30px;
+  }
+  .hero--slider .featured--car {
+    background-size: 100% 100%;
+  }
+  .menu--search--wrapp {
+    padding-left: calc((100% - 1140px) / 2 + 15px);
+  }
+  .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .hero--area {
+    padding: 145px 0 70px;
+  }
+  .more--photos--box {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .live--auctions--area {
+    padding-bottom: 100px;
+  }
+  .testimonial--card .message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    margin-bottom: 80px;
+  }
+  .testimonial--area .sec--title.mb_95 {
+    margin-bottom: 50px;
+  }
+  .testimonial--card .rating {
+    bottom: 30px;
+    padding: 10px 26px;
+  }
+  .footer--box {
+    margin-top: 30px;
+  }
+  .slider-right-box img,
+  .more--photos--box {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  footer {
+    padding-top: 40px;
+  }
+  .owl-nav button {
+    height: 36px;
+    width: 36px;
+  }
+  .advantage--card p br {
+    display: none;
+  }
+  .advantage--card:before {
+    left: -12px;
+  }
+  .how--works--area .step--box p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .how--works--area .step--box {
+    padding: 22px;
+  }
+  .how--works--area .num--box {
+    font-size: 38px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(1) {
+    top: 100px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(2) {
+    top: 282px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(3) {
+    top: 459px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(4) {
+    top: 644px;
+  }
+  .how--works--area .steps--inner .progress--bar {
+    height: 838px;
+  }
+  .recent--sale--area,
+  .cars--and--bids--area {
+    padding: 100px 0;
+  }
+  .faq--area {
+    padding-bottom: 0px;
+  }
+  .faq--box.contact--box .button {
+    width: 100%;
+  }
+  .how--works--area .step--box.right {
+    margin-left: 70px;
+    margin-right: 0;
+  }
+  .car--stepform--popup {
+    width: 90%;
+  }
+  .car--stepform--popup .radio--box label {
+    padding: 10px 14px;
+  }
+  .car--stepform--popup .indicator .indicator-circle {
+    width: 65px;
+    height: 65px;
+    font-size: 24px;
+  }
+  .car--stepform--popup .steps--indicators img {
+    top: 32px;
+  }
+  .live--auctions--area.auction--result {
+    padding-top: 150px;
+  }
+  .about--us--area {
+    padding: 140px 0 100px;
+  }
+  .about--us--area .about--content h1 {
+    font-size: 36px;
+    line-height: normal;
+  }
+  .about--us--area .car--review {
+    margin-top: 54px;
+    gap: 42px;
+  }
+  .about--us--area .car--review h4 {
+    font-size: 28px;
+    line-height: normal;
+  }
+  .about--us--area .car--review img {
+    height: 155px;
+    width: 155px;
+  }
+  .about--us--area .advantages {
+    margin-top: 45px;
+  }
+  .working--process--area {
+    padding: 100px 0;
+  }
+  .working--process--area .section--title h3 {
+    line-height: normal;
+    font-size: 36px;
+  }
+  .working--process--area .car--contents {
+    padding-left: 26px;
+  }
+  .working--process--area .car--contents h3 {
+    font-size: 28px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  .testimonial--area {
+    padding: 100px 0 90px;
+  }
+  .working--process--area .mt_65 {
+    margin-top: 40px;
+  }
+  .working--process--area .video--popup {
+    padding: 60px 40px;
+  }
+  .action--ending--soon {
+    padding-left: 20px;
+  }
+  .details--and--morearea .car-details-table--wrapper .title h3,
+  .action--ending--soon h3 {
+    font-size: 26px;
+    line-height: normal;
+  }
+  .table--wrapper {
+    display: block;
+  }
+  .table--wrapper .table {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .table--wrapper .table:last-child {
+    border-left: 1px solid rgba(90, 92, 95, 0.4);
+    border-top: 0;
+  }
+  .step-bid--popup .step .common-car--title h3 {
+    font-size: 30px;
+  }
+  .profile--area {
+    padding: 184px 0 48px;
+  }
+  .profile--area .profile--contents form {
+    min-width: 165px;
+    min-height: 165px;
+    max-width: 165px;
+    max-height: 165px;
+  }
+  .profile--area .profile--contents .preview--img img {
+    width: 165px;
+    height: 165px;
+  }
+  .profile--area .profile--contents label {
+    right: 0px;
+    height: 37px;
+    width: 37px;
+  }
+  .profile--area .profile--name h1 {
+    font-size: 28px;
+  }
+  .profile--area .profile--name {
+    margin-top: 18px;
+  }
+  .profile--history--area .nav-link {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+  .bidder--profile--history h4 {
+    font-size: 28px;
+  }
+  .auth--form {
+    padding: 40px 34px;
+  }
+  .auth--area .button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+  .auth--title h1 {
+    font-size: 34px;
+  }
+  .auth--form .divider {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero--area .section--title.mb_35 {
+    margin-bottom: 20px;
+  }
+  .sec--title {
+    font-size: 32px;
+  }
+  .owl-nav button {
+    left: -50px;
+  }
+  .owl-nav .owl-next {
+    right: -50px;
+  }
+  .hero--area {
+    padding: 160px 0 70px;
+  }
+  .hero--slider .featured--car h3 {
+    font-size: 20px;
+    width: 100%;
+    line-height: normal;
+  }
+  .car--card .img--area {
+    height: 200px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 38px;
+  }
+  .testimonial--area {
+    padding-left: calc((100% - 960px) / 2 + 15px);
+  }
+  .testimonial--card {
+    padding: 24px;
+  }
+  .hero--slider .featured--car {
+    background-size: 100% 100%;
+    height: 395px;
+    padding: 20px;
+  }
+  .menu--search--wrapp {
+    padding-left: calc((100% - 960px) / 2 + 15px);
+  }
+  .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .hero--area {
+    padding: 145px 0 70px;
+  }
+  .more--photos--box {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .live--auctions--area {
+    padding-bottom: 100px;
+  }
+  .testimonial--card .message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    margin-bottom: 80px;
+  }
+  .testimonial--area .sec--title.mb_95 {
+    margin-bottom: 50px;
+  }
+  .testimonial--card .rating {
+    bottom: 30px;
+    padding: 5px 12px;
+    font-size: 18px;
+  }
+  .testimonial--card .rating svg {
+    width: 78px;
+  }
+  .footer--box {
+    margin-top: 30px;
+  }
+  .slider-right-box img,
+  .more--photos--box {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 187px;
+  }
+  footer {
+    padding-top: 40px;
+  }
+  .owl-nav button {
+    height: 36px;
+    width: 36px;
+  }
+  .live--auctions--area .category--and--sort .sort--by ul li {
+    font-size: 16px;
+  }
+  .live--auctions--area .nice-select,
+  .live--auctions--area .nice-select span {
+    color: var(--heading-color);
+    font-size: 16px;
+  }
+  .car--card .car--model a {
+    font-size: 18px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 32px;
+  }
+  .cars--and--bids--area .counter--box p {
+    font-size: 18px;
+  }
+  .section--title.mb_95 {
+    margin-bottom: 50px;
+  }
+  .testimonial--card .message {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 60px;
+  }
+  .testimonial--card .client p {
+    font-size: 18px;
+  }
+  footer .logo-box img {
+    width: 234px;
+  }
+  img.mfp-img {
+    min-width: 700px !important;
+    max-width: 700px !important;
+  }
+  .auction--card h4 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .auction--card p {
+    font-size: 18px;
+    line-height: 29.8px;
+  }
+  .auction--card {
+    padding: 30px;
+  }
+  .how--works--area .step--box p {
+    font-size: 18px;
+    line-height: 28px;
+    width: 100%;
+  }
+  .how--works--area .step--box {
+    width: 370px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(1) {
+    top: 103px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(2) {
+    top: 298px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(3) {
+    top: 512px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(4) {
+    top: 713px;
+  }
+  .how--works--area .steps--inner .progress--bar {
+    height: 900px;
+  }
+  .advantage--card p br {
+    display: none;
+  }
+  .advantage--card:before {
+    left: -12px;
+  }
+  .faq--box.contact--box .button {
+    width: 100%;
+  }
+  .car--stepform--popup {
+    width: 90%;
+  }
+  .car--stepform--popup .top--logo--area {
+    width: 100% !important;
+  }
+  .car--stepform--popup .indicator .indicator-circle {
+    width: 70px;
+    height: 70px;
+  }
+  .car--stepform--popup .radio--box label {
+    padding: 14px 16px;
+  }
+  .live--auctions--area.auction--result {
+    padding-top: 150px;
+  }
+  .pagination--wrap li a {
+    font-size: 18px;
+  }
+  .live--auctions--area.auction--result .mt_95 {
+    margin-top: 50px;
+  }
+  .about--us--area {
+    padding: 137px 0 100px;
+  }
+  .about--us--area .about--content h1 {
+    font-size: 32px;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+  .about--us--area .about--content {
+    padding-right: 20px;
+  }
+  .about--us--area .car--review {
+    margin-top: 40px;
+    gap: 40px;
+  }
+  .about--us--area .car--review img {
+    height: 150px;
+    width: 150px;
+  }
+  .about--us--area .car--review h4 {
+    font-size: 26px;
+    line-height: normal;
+  }
+  .about--us--area .advantages {
+    margin-top: 40px;
+  }
+  .advantage--card h4 {
+    font-size: 20px;
+  }
+  .advantage--card p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .working--process--area .section--title h3 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 32px;
+  }
+  .working--process--area {
+    padding: 100px 0;
+  }
+  .working--process--area .car--contents {
+    padding-left: 20px;
+  }
+  .working--process--area .car--contents h3 {
+    font-size: 26px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  .working--process--area .video--popup {
+    padding: 46px 40px;
+  }
+  .table--wrapper {
+    display: block;
+  }
+  .table--wrapper .table {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .table--wrapper .table:last-child {
+    border-left: 1px solid rgba(90, 92, 95, 0.4);
+    border-top: 0;
+  }
+  .single--car--hero.hero--slider .featured--car {
+    padding: 0px;
+  }
+  .action--ending--soon {
+    padding-left: 0px;
+  }
+  .details--and--morearea .car-details-table--wrapper .title p {
+    font-size: 12px;
+  }
+  .details--and--morearea .car-details-table--wrapper .title h3 {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .action--ending--soon h3 {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .action--ending--soon .row {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+  .action--ending--soon .row [class*="col-"] {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .place--bid--wrapper {
+    gap: 10px;
+  }
+  .action--ending--soon .car--card .card--footer p {
+    font-size: 12px;
+  }
+  .action--ending--soon .car--card .card--footer .button {
+    padding: 6px 12px;
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  .single--car--hero .name--area h1 {
+    font-size: 26px;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  .single--car--hero .name--area p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .single--car--hero {
+    padding: 150px 0 20px;
+  }
+  .step-bid--popup .step .common-car--title h3 {
+    font-size: 30px;
+  }
+  .bid--popup {
+    width: 90%;
+  }
+  .profile--area {
+    padding: 184px 0 48px;
+  }
+  .profile--area .profile--contents form {
+    min-width: 165px;
+    min-height: 165px;
+    max-width: 165px;
+    max-height: 165px;
+  }
+  .profile--area .profile--contents .preview--img img {
+    width: 165px;
+    height: 165px;
+  }
+  .profile--area .profile--contents label {
+    right: 0px;
+    height: 37px;
+    width: 37px;
+  }
+  .profile--area .profile--name h1 {
+    font-size: 28px;
+  }
+  .profile--area .profile--name {
+    margin-top: 18px;
+  }
+  .profile--history--area .nav-link {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+  .bidder--profile--history h4 {
+    font-size: 26px;
+  }
+  .auth--form {
+    padding: 40px 34px;
+  }
+  .auth--area .button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+  .auth--title h1 {
+    font-size: 34px;
+    line-height: normal;
+  }
+  .auth--title p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .auth--form .divider {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero--area .section--title.mb_35 {
+    margin-bottom: 2px;
+  }
+  .sec--title {
+    font-size: 26px;
+  }
+  .owl-nav button {
+    left: -50px;
+  }
+  .owl-nav .owl-next {
+    right: -50px;
+  }
+  .hero--area {
+    padding: 160px 0 70px;
+  }
+  .hero--slider .featured--car h3 {
+    font-size: 20px;
+    width: 100%;
+    line-height: normal;
+  }
+  .car--card .img--area {
+    height: 200px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 38px;
+  }
+  .testimonial--area {
+    padding: 70px 0;
+    padding-left: calc((100% - 720px) / 2 + 15px);
+  }
+  .testimonial--card {
+    padding: 20px;
+  }
+  .hero--slider .featured--car {
+    background-size: 100% 100%;
+    height: 395px;
+    padding: 20px;
+  }
+  .menu--search--wrapp {
+    padding-left: calc((100% - 720px) / 2 + 15px);
+  }
+  .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .hero--area {
+    padding: 130px 0 50px;
+  }
+  .more--photos--box {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .live--auctions--area {
+    padding-bottom: 100px;
+  }
+  .testimonial--card .message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    margin-bottom: 80px;
+  }
+  .testimonial--area .sec--title.mb_95 {
+    margin-bottom: 50px;
+  }
+  .testimonial--card .rating {
+    top: 16px;
+    padding: 5px 12px;
+    font-size: 18px;
+    bottom: auto;
+    left: 22px;
+    right: auto;
+  }
+  .testimonial--card .rating svg {
+    width: 52px;
+  }
+  .footer--box {
+    margin-top: 40px;
+    max-width: 33.33%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+  }
+  .footer--box:nth-child(5) {
+    max-width: 56%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 56%;
+    flex: 0 0 56%;
+  }
+  .slider-right-box img,
+  .more--photos--box {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 187px;
+  }
+  footer {
+    padding-top: 40px;
+  }
+  footer .custom--row {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .owl-nav button {
+    height: 36px;
+    width: 36px;
+  }
+  .live--auctions--area .category--and--sort .sort--by ul li {
+    font-size: 15px;
+    padding: 0;
+  }
+  .live--auctions--area .category--and--sort .sort--by p {
+    font-size: 14px;
+  }
+  .live--auctions--area .nice-select,
+  .live--auctions--area .nice-select span {
+    color: var(--heading-color);
+    font-size: 16px;
+  }
+  .car--card .car--model a {
+    font-size: 18px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 26px;
+  }
+  .cars--and--bids--area .counter--box p {
+    font-size: 15px;
+  }
+  .section--title.mb_95 {
+    margin-bottom: 40px;
+  }
+  .testimonial--card .message {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-top: 46px;
+  }
+  .testimonial--card .client p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  footer .logo-box img {
+    width: 196px;
+    height: 40px;
+    margin-bottom: 26px;
+  }
+  header {
+    padding: 20px 0;
+  }
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+  img.mfp-img {
+    min-width: 500px !important;
+    max-width: 500px !important;
+  }
+  .section--title.mb_50 {
+    margin-bottom: 20px;
+  }
+  .live--auctions--area .category--and--sort .nice-select {
+    width: 260px;
+  }
+  .live--auctions--area {
+    padding-bottom: 70px;
+  }
+  .live--auctions--area .mt_70 {
+    margin-top: 40px;
+  }
+  .cars--and--bids--area {
+    padding: 70px 0;
+  }
+  .cars--and--bids--area .section--title h3 {
+    margin-bottom: 30px;
+  }
+  .testimonial--card .client img {
+    height: 40px;
+    width: 40px;
+  }
+  .testimonial--card .client span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .cars--and--bids--area .counter--box:before {
+    left: -10px;
+  }
+  header .logo {
+    min-width: 160px;
+    max-width: 160px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  [data-aos][data-aos-delay].aos-animate,
+  body [data-aos-delay].aos-animate {
+    -webkit-transition-delay: 0s !important;
+    -o-transition-delay: 0s !important;
+    transition-delay: 0s !important;
+  }
+  .sell--car--hero--area h1 {
+    width: 100%;
+  }
+  .how--works--area .steps--inner .progress--area {
+    left: 0;
+  }
+  .how--works--area .num--box {
+    display: none;
+  }
+  .how--works--area .mt_40 {
+    margin-top: 0;
+  }
+  .how--works--area .step--box {
+    margin-right: 0;
+    margin-left: 0;
+    width: calc(100% - 70px);
+  }
+  .how--works--area .step--box:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -42px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-image: url(../images/triangle-right.png);
+    height: 91px;
+    width: 42px;
+  }
+  .how--works--area .step--box {
+    margin-left: 70px;
+  }
+  .faq--box.contact--box .button {
+    width: 100%;
+  }
+  .advantage--card.three:before {
+    display: none;
+  }
+  .car--stepform--popup .top--logo--area {
+    width: 100%;
+  }
+  .sell--car--hero--area {
+    padding: 165px 0 90px;
+  }
+  .sell--car--hero--area h1 {
+    margin-bottom: 20px;
+  }
+  .our--auction--area {
+    padding: 80px 0;
+  }
+  .auction--card h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+  .auction--card {
+    padding: 20px;
+  }
+  .auction--card p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .how--works--area .step--box p {
+    font-size: 18px;
+    line-height: 28px;
+    width: 100%;
+  }
+  .how--works--area .row--secound [class*="col-"]:nth-child(odd) {
+    margin-top: 20px;
+  }
+  .how--works--area .steps--inner .progress--bar {
+    height: 576px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(1) {
+    top: 68px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(2) {
+    top: 205px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(3) {
+    top: 342px;
+  }
+  .how--works--area .steps--inner .circle:nth-child(4) {
+    top: 476px;
+  }
+  .how--works--area {
+    padding-bottom: 139px;
+  }
+  .advantage--area {
+    padding: 80px 0;
+  }
+  .advantage--card h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .recent--sale--area {
+    padding: 80px 0;
+  }
+  .recent--sale--area .section--title.mb_30 {
+    margin-bottom: 8px;
+  }
+  .faq--area {
+    padding: 80px 0 0;
+  }
+  .faq--box {
+    padding: 30px;
+    min-height: 300px;
+  }
+  .faq--area .section--title.mb_40 {
+    margin-bottom: 0px;
+  }
+  .car--stepform--popup .top--logo--area h3 {
+    font-size: 24px;
+    line-height: normal;
+  }
+  .car--stepform--popup .top--logo--area img {
+    width: 200px;
+    height: 70px;
+  }
+  .car--stepform--popup .indicator .indicator-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+  .car--stepform--popup .steps--indicators img {
+    top: 30px;
+  }
+  .profile--history--area textarea {
+    line-height: 30px;
+  }
+  .car--stepform--popup input,
+  .car--stepform--popup textarea,
+  .car--stepform--popup .nice-select,
+  .profile--history--area input,
+  .profile--history--area .nice-select,
+  .profile--history--area textarea {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 14px;
+  }
+  .car--stepform--popup textarea,
+  .profile--history--area textarea {
+    height: 130px;
+    line-height: normal;
+    padding-top: 16px;
+  }
+  .car--stepform--popup .radio--box label {
+    padding: 10px 22px;
+  }
+  .car--stepform--popup .form--btn {
+    padding: 11px;
+  }
+  .car--stepform--popup {
+    width: 90%;
+    padding: 68px 20px 36px;
+  }
+  .live--auctions--area.auction--result {
+    padding-top: 130px;
+  }
+  .pagination--wrap li a {
+    font-size: 16px;
+  }
+  .live--auctions--area.auction--result .mt_95 {
+    margin-top: 50px;
+  }
+  .about--us--area {
+    padding: 137px 0 100px;
+  }
+  .about--us--area .about--content h1 {
+    font-size: 26px;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .about--us--area .about--content {
+    padding-right: 20px;
+  }
+  .about--us--area .car--review {
+    margin-top: 40px;
+    gap: 27px;
+  }
+  .about--us--area .car--review img {
+    height: 120px;
+    width: 120px;
+  }
+  .about--us--area .car--review h4 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .about--us--area .advantages {
+    margin-top: 40px;
+  }
+  .advantage--card h4 {
+    font-size: 20px;
+  }
+  .advantage--card p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .working--process--area .section--title h3 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 26px;
+  }
+  .working--process--area {
+    padding: 60px 0 80px;
+  }
+  .working--process--area .car--contents {
+    padding-left: 0px;
+  }
+  .working--process--area .car--contents h3 {
+    font-size: 22px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  .about--us--area [class*="col-"]:nth-child(1) {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .about--us--area {
+    padding: 110px 0 20px;
+  }
+  .about--us--area .img--area {
+    height: 540px;
+  }
+  .about--us--area .about--content {
+    padding-right: 0px;
+  }
+  .working--process--area .section--title p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .working--process--area .nav-link {
+    padding: 10px 18px;
+    font-size: 17px;
+  }
+  .tab-content.mt_65 {
+    margin-top: 20px;
+  }
+  .working--process--area .tab-pane .img--area img {
+    height: 540px;
+  }
+  .working--process--area .video--popup {
+    padding: 66px 40px;
+  }
+  .testimonial--area .owl-stage {
+    margin-left: -20px;
+  }
+  .about--us--area .car--review p {
+    width: 100%;
+    line-height: normal;
+  }
+  .section--title p {
+    width: 100%;
+  }
+  .action--ending--soon {
+    padding-left: 0px;
+  }
+  .table--wrapper {
+    display: block;
+  }
+  .table--wrapper .table {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .table--wrapper .table:last-child {
+    border-left: 1px solid rgba(90, 92, 95, 0.4);
+    border-top: 0;
+  }
+  .single--car--hero.hero--slider .featured--car {
+    padding: 0px;
+  }
+  .action--ending--soon {
+    padding-left: 0px;
+  }
+  .details--and--morearea .car-details-table--wrapper .title p {
+    font-size: 14px;
+  }
+  .details--and--morearea .car-details-table--wrapper .title h3 {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .action--ending--soon h3 {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .action--ending--soon .row {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+  .action--ending--soon .row [class*="col-"] {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .place--bid--wrapper {
+    gap: 10px;
+    padding: 14px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .action--ending--soon .car--card .card--footer p {
+    font-size: 12px;
+  }
+  .action--ending--soon .car--card .card--footer .button {
+    padding: 6px 12px;
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  .single--car--hero .name--area h1 {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  .single--car--hero .name--area p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .single--car--hero {
+    padding: 120px 0 20px;
+  }
+  .single--car--hero .name--area a {
+    padding: 7px 12px;
+  }
+  .step-bid--popup .step .common-car--title h3 {
+    font-size: 26px;
+    line-height: normal;
+  }
+  .bid--popup {
+    width: 90%;
+    padding: 44px 30px;
+    position: fixed;
+  }
+  .bid--popup .logo img {
+    width: 187px;
+    height: 56px;
+    padding-bottom: 6px;
+  }
+  .step-bid--popup .step .common-car--title {
+    padding: 24px 0 24px;
+  }
+  .bid--popup .button {
+    padding: 10px;
+  }
+  .place--bid--wrapper .single--info .icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .place--bid--wrapper .single--info .icon {
+    width: 35px;
+    height: 35px;
+  }
+  .place--bid--wrapper .single--info p {
+    font-size: 14px;
+  }
+  .place--bid--wrapper .single--info {
+    max-width: 49%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 49%;
+    flex: 0 0 49%;
+  }
+  .bid--popup {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0.9);
+    -ms-transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9);
+    max-height: calc(100% - 60px);
+    overflow-y: auto;
+  }
+  .bid--popup.show {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .bid--popup .top--title p {
+    width: 100%;
+  }
+  .bid--popup .top--title h3 {
+    font-size: 26px;
+  }
+  .profile--area {
+    padding: 146px 0 28px;
+  }
+  .profile--area .profile--contents form {
+    min-width: 126px;
+    min-height: 126px;
+    max-width: 126px;
+    max-height: 126px;
+  }
+  .profile--area .profile--contents .preview--img img {
+    width: 126px;
+    height: 126px;
+  }
+  .profile--area .profile--contents label {
+    right: 0px;
+    height: 37px;
+    width: 37px;
+  }
+  .profile--area .profile--name h1 {
+    font-size: 26px;
+  }
+  .profile--area .profile--name {
+    margin-top: 18px;
+  }
+  .profile--history--area .nav-link {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+  .profile--area .profile--contents {
+    width: 100%;
+  }
+  .profile--area .profile--contents label {
+    right: 0px;
+    height: 32px;
+    width: 32px;
+    border-width: 2px;
+  }
+  .profile--area .profile--name p {
+    padding-bottom: 38px;
+  }
+  .bidder--profile--history h4 {
+    font-size: 26px;
+  }
+  .bidder--profile--history h4 span {
+    font-size: 17px;
+  }
+  .auction--comment--card .img--area {
+    height: 248px;
+    min-width: 290px;
+    max-width: 290px;
+  }
+  .auction--comment--card {
+    gap: 24px;
+  }
+  .auction--comment--card .details--area h3 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .auction--comment--card .details--area .date {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .bidder--profile--history {
+    padding-bottom: 80px;
+  }
+  .auth--row {
+    display: block;
+  }
+  .auth--row .auth--img,
+  .auth--row .auth--form {
+    max-width: 100%;
+    height: auto;
+  }
+  .auth--area {
+    height: auto;
+    overflow: auto;
+  }
+  .auth--row .auth--img {
+    display: none;
+  }
+  .auth--form {
+    padding: 40px 70px;
+  }
+  .auth--area .button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+  .auth--title h1 {
+    font-size: 34px;
+  }
+  .auth--title p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .auth--form .divider {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .hero--area .section--title.mb_35 {
+    margin-bottom: 2px;
+  }
+  .sec--title {
+    font-size: 26px;
+  }
+  .owl-nav button {
+    left: -50px;
+  }
+  .owl-nav .owl-next {
+    right: -50px;
+  }
+  .hero--area {
+    padding: 160px 0 70px;
+  }
+  .hero--slider .featured--car h3 {
+    font-size: 20px;
+    width: 100%;
+    line-height: normal;
+  }
+  .car--card .img--area {
+    height: 200px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 38px;
+  }
+  .testimonial--area {
+    padding: 70px 0;
+    padding-left: calc((100% - 540px) / 2 + 15px);
+  }
+  .testimonial--card {
+    padding: 20px;
+  }
+  .hero--slider .featured--car {
+    background-size: 100% 100%;
+    height: 334px;
+    padding: 20px;
+  }
+  .menu--search--wrapp {
+    padding-left: calc((100% - 540px) / 2 + 15px);
+  }
+  .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .hero--area {
+    padding: 130px 0 50px;
+  }
+  .more--photos--box {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .live--auctions--area {
+    padding-bottom: 100px;
+  }
+  .testimonial--card .message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    margin-bottom: 80px;
+  }
+  .testimonial--area .sec--title.mb_95 {
+    margin-bottom: 50px;
+  }
+  .testimonial--card .rating {
+    top: 16px;
+    padding: 5px 12px;
+    font-size: 18px;
+    bottom: auto;
+    left: 22px;
+    right: auto;
+  }
+  .testimonial--card .rating svg {
+    width: 52px;
+  }
+  .footer--box {
+    margin-top: 40px;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .footer--box:nth-child(5) {
+    max-width: 56%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 56%;
+    flex: 0 0 56%;
+  }
+  .slider-right-box img,
+  .more--photos--box {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 187px;
+  }
+  footer {
+    padding-top: 40px;
+  }
+  footer .custom--row {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .owl-nav button {
+    height: 36px;
+    width: 36px;
+  }
+  .live--auctions--area .category--and--sort .sort--by ul li {
+    font-size: 15px;
+    padding: 0;
+  }
+  .live--auctions--area .category--and--sort .sort--by p {
+    font-size: 14px;
+  }
+  .live--auctions--area .nice-select,
+  .live--auctions--area .nice-select span {
+    color: var(--heading-color);
+    font-size: 16px;
+  }
+  .car--card .car--model a {
+    font-size: 18px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 26px;
+  }
+  .cars--and--bids--area .counter--box p {
+    font-size: 15px;
+  }
+  .section--title.mb_95 {
+    margin-bottom: 40px;
+  }
+  .testimonial--card .message {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-top: 46px;
+  }
+  .testimonial--card .client p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  footer .logo-box img {
+    width: 196px;
+    height: 40px;
+    margin-bottom: 26px;
+  }
+  header {
+    padding: 20px 0;
+  }
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+  img.mfp-img {
+    min-width: 400px !important;
+    max-width: 400px !important;
+  }
+  .section--title.mb_50 {
+    margin-bottom: 20px;
+  }
+  .live--auctions--area .category--and--sort .nice-select {
+    width: 260px;
+    margin-bottom: 20px;
+  }
+  .live--auctions--area {
+    padding-bottom: 70px;
+  }
+  .live--auctions--area .mt_70 {
+    margin-top: 40px;
+  }
+  .cars--and--bids--area {
+    padding: 70px 0;
+  }
+  .cars--and--bids--area .section--title h3 {
+    margin-bottom: 30px;
+  }
+  .testimonial--card .client img {
+    height: 40px;
+    width: 40px;
+  }
+  .testimonial--card .client span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .cars--and--bids--area .counter--box:before {
+    left: -10px;
+  }
+  header .logo {
+    min-width: 160px;
+    max-width: 160px;
+  }
+  header .button {
+    padding: 6px 9px;
+  }
+  .live--auctions--area .category--and--sort {
+    display: block;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-bottom: 20px;
+  }
+  .live--auctions--area .category--and--sort .sort--by {
+    width: 100%;
+  }
+  .filtered--options {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .cars--and--bids--area .counter--box.three:before {
+    display: none;
+  }
+  .footer--box form input,
+  .footer--box form button {
+    height: 48px;
+  }
+  .hero--slider .featured--car .category {
+    font-size: 16px;
+  }
+  .testimonial--area .owl-stage {
+    margin-left: -20px;
+  }
+  .filter--and--category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .live--auctions--area .category--and--sort .nice-select {
+    width: 100%;
+  }
+  .live--auctions--area .section--title.mb_50 {
+    margin-bottom: 0px;
+  }
+  .cars--and--bids--area .counter--box:before {
+    display: none;
+  }
+  .place--bid--wrapper .single--info {
+    max-width: 36%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 36%;
+    flex: 0 0 36%;
+  }
+  .profile--area .profile--name ul {
+    display: block;
+  }
+  .profile--area .profile--name ul li:before {
+    display: none;
+  }
+  .auction--comment--card .img--area {
+    height: 270px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .auction--comment--card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .auction--comment--card .details--area h3 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .auction--comment--card .details--area .date {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .bidder--profile--history {
+    padding-bottom: 80px;
+  }
+  .auction--comment--card .details--area {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+  .hero--area .section--title.mb_35 {
+    margin-bottom: 2px;
+  }
+  .sec--title {
+    font-size: 26px;
+  }
+  .owl-nav button {
+    left: -50px;
+  }
+  .owl-nav .owl-next {
+    right: -50px;
+  }
+  .hero--area {
+    padding: 160px 0 70px;
+  }
+  .hero--slider .featured--car h3 {
+    font-size: 20px;
+    width: 100%;
+    line-height: normal;
+  }
+  .car--card .img--area {
+    height: 200px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 38px;
+  }
+  .testimonial--area {
+    padding: 70px 0;
+    padding-left: 20px;
+  }
+  .testimonial--card {
+    padding: 20px;
+  }
+  .hero--slider .featured--car {
+    background-size: 100% 100%;
+    height: 334px;
+    padding: 20px;
+  }
+  .menu--search--wrapp {
+    padding-left: 20px;
+    padding-top: 88px;
+  }
+  .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .hero--area {
+    padding: 130px 0 50px;
+  }
+  .more--photos--box {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .live--auctions--area {
+    padding-bottom: 100px;
+  }
+  .testimonial--card .message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    margin-bottom: 80px;
+  }
+  .testimonial--area .sec--title.mb_95 {
+    margin-bottom: 50px;
+  }
+  .testimonial--card .rating {
+    top: 16px;
+    padding: 5px 12px;
+    font-size: 18px;
+    bottom: auto;
+    left: 22px;
+    right: auto;
+  }
+  .testimonial--card .rating svg {
+    width: 52px;
+  }
+  .footer--box {
+    margin-top: 40px;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .footer--box:nth-child(5) {
+    max-width: 56%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 56%;
+    flex: 0 0 56%;
+  }
+  .slider-right-box img,
+  .more--photos--box {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 187px;
+  }
+  footer {
+    padding-top: 40px;
+  }
+  footer .custom--row {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .owl-nav button {
+    height: 36px;
+    width: 36px;
+  }
+  .live--auctions--area .category--and--sort .sort--by ul li {
+    font-size: 15px;
+    padding: 0;
+  }
+  .live--auctions--area .category--and--sort .sort--by p {
+    font-size: 14px;
+  }
+  .live--auctions--area .nice-select,
+  .live--auctions--area .nice-select span {
+    color: var(--heading-color);
+    font-size: 16px;
+  }
+  .car--card .car--model a {
+    font-size: 18px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 26px;
+  }
+  .cars--and--bids--area .counter--box p {
+    font-size: 15px;
+  }
+  .section--title.mb_95 {
+    margin-bottom: 40px;
+  }
+  .testimonial--card .message {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-top: 46px;
+  }
+  .testimonial--card .client p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  footer .logo-box img {
+    width: 196px;
+    height: 40px;
+    margin-bottom: 26px;
+  }
+  header {
+    padding: 20px 0;
+  }
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+  img.mfp-img {
+    min-width: 400px !important;
+    max-width: 400px !important;
+  }
+  .section--title.mb_50 {
+    margin-bottom: 20px;
+  }
+  .live--auctions--area .category--and--sort .nice-select {
+    width: 260px;
+    margin-bottom: 20px;
+  }
+  .live--auctions--area {
+    padding-bottom: 70px;
+  }
+  .live--auctions--area .mt_70 {
+    margin-top: 40px;
+  }
+  .cars--and--bids--area {
+    padding: 70px 0;
+  }
+  .cars--and--bids--area .section--title h3 {
+    margin-bottom: 30px;
+  }
+  .testimonial--card .client img {
+    height: 40px;
+    width: 40px;
+  }
+  .testimonial--card .client span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .cars--and--bids--area .counter--box:before {
+    left: -10px;
+  }
+  header .logo {
+    min-width: 160px;
+    max-width: 160px;
+    margin-right: 0;
+  }
+  header .button {
+    padding: 6px 9px;
+  }
+  .live--auctions--area .category--and--sort {
+    display: block;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-bottom: 14px;
+  }
+  .live--auctions--area .category--and--sort .sort--by {
+    width: 100%;
+  }
+  .filtered--options {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .cars--and--bids--area .counter--box.three:before {
+    display: none;
+  }
+  .footer--box form input,
+  .footer--box form button {
+    height: 48px;
+  }
+  .hero--slider .featured--car .category {
+    font-size: 16px;
+  }
+  .header--right .nice-select span,
+  .header--right .nice-select li {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--heading-color);
+  }
+  .cars--and--bids--area .counter--box:before {
+    display: none;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .header--right {
+    gap: 12px;
+  }
+  .advantage--card:before {
+    display: none;
+  }
+  .filter--and--category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .live--auctions--area .category--and--sort .nice-select {
+    width: 100%;
+  }
+  .live--auctions--area .section--title.mb_50 {
+    margin-bottom: 0px;
+  }
+  .working--process--area .nav-link {
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+  .working--process--area .tab-pane .img--area img,
+  .about--us--area .img--area {
+    height: 380px;
+  }
+  .working--process--area .video--popup {
+    padding: 30px;
+  }
+  .video--popup svg {
+    height: 70px;
+    width: 70px;
+  }
+  .single--car--hero .name--area {
+    display: block;
+  }
+  .single--car--hero .btn--group {
+    margin-top: 20px;
+  }
+  .step-bid--popup .step .car--details img {
+    height: 222px;
+  }
+  .step-bid--popup .step .common-car--title h3 {
+    font-size: 24px;
+  }
+  .place--bid--wrapper .button {
+    position: relative;
+    right: auto;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .place--bid--wrapper .single--info {
+    max-width: 47%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 47%;
+    flex: 0 0 47%;
+  }
+  .bid--popup .top--title h3 {
+    font-size: 24px;
+  }
+  .bid--popup .top--title p {
+    width: 100%;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
+    margin-bottom: 45px;
+  }
+  .profile--area .profile--name ul {
+    display: block;
+  }
+  .profile--area .profile--name ul li:before {
+    display: none;
+  }
+  .profile--history--area .nav-link {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+  .profile--history--area form,
+  .delete--button {
+    padding: 0;
+  }
+  .auction--comment--card .img--area {
+    height: 270px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .auction--comment--card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .auction--comment--card .details--area h3 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .auction--comment--card .details--area .date {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .bidder--profile--history {
+    padding-bottom: 80px;
+  }
+  .auction--comment--card .details--area {
+    width: 100%;
+  }
+  .auth--form {
+    padding: 40px 26px;
+  }
+  .auth--form input {
+    height: 48px;
+    padding: 0 20px;
+  }
+  .account--reminder {
+    margin-top: 50px;
+  }
+  .auth--title h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 479px) {
+  .hero--area .section--title.mb_35 {
+    margin-bottom: 0px;
+  }
+  .sec--title {
+    font-size: 22px;
+  }
+  .hero--area {
+    padding: 160px 0 70px;
+  }
+  .hero--slider .featured--car h3 {
+    font-size: 17px;
+    width: 100%;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  .car--card .img--area {
+    height: 200px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 38px;
+  }
+  .testimonial--area {
+    padding: 70px 0;
+    padding-left: 20px;
+  }
+  .testimonial--card {
+    padding: 20px;
+  }
+  .hero--slider .featured--car {
+    background-size: 100% 100%;
+    height: 260px;
+    padding: 16px;
+  }
+  .menu--search--wrapp {
+    padding-left: 20px;
+    padding-top: 88px;
+  }
+  .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .hero--area {
+    padding: 110px 0 40px;
+  }
+  .more--photos--box {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .live--auctions--area {
+    padding-bottom: 100px;
+  }
+  .testimonial--card .message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    margin-bottom: 80px;
+  }
+  .testimonial--area .sec--title.mb_95 {
+    margin-bottom: 50px;
+  }
+  .testimonial--card .rating {
+    top: 16px;
+    padding: 5px 12px;
+    font-size: 18px;
+    bottom: auto;
+    left: 22px;
+    right: auto;
+  }
+  .testimonial--card .rating svg {
+    width: 52px;
+  }
+  .footer--box {
+    margin-top: 40px;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .footer--box:nth-child(5) {
+    max-width: 56%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 56%;
+    flex: 0 0 56%;
+  }
+  .slider-right-box img,
+  .more--photos--box {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 230px;
+  }
+  footer {
+    padding-top: 30px;
+  }
+  footer .custom--row {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .owl-nav button {
+    height: 36px;
+    width: 36px;
+  }
+  .live--auctions--area .category--and--sort .sort--by ul li {
+    font-size: 15px;
+    padding: 0;
+  }
+  .live--auctions--area .category--and--sort .sort--by p {
+    font-size: 14px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 20px;
+  }
+  .car--card .car--model a {
+    font-size: 17px;
+    line-height: normal;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 24px;
+  }
+  .cars--and--bids--area .counter--box p {
+    font-size: 14px;
+  }
+  .section--title.mb_95 {
+    margin-bottom: 26px;
+  }
+  .testimonial--card .message {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-top: 46px;
+  }
+  .testimonial--card .client p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  footer .logo-box img {
+    width: 186px;
+    height: 40px;
+    margin-bottom: 26px;
+  }
+  header {
+    padding: 20px 0;
+  }
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+  img.mfp-img {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+  .section--title.mb_50 {
+    margin-bottom: 2px;
+  }
+  .live--auctions--area .category--and--sort .nice-select {
+    width: 260px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .live--auctions--area {
+    padding-bottom: 60px;
+  }
+  .live--auctions--area .mt_70 {
+    margin-top: 30px;
+  }
+  .cars--and--bids--area {
+    padding: 60px 0;
+  }
+  .cars--and--bids--area .section--title h3 {
+    margin-bottom: 12px;
+  }
+  .testimonial--card .client img {
+    height: 40px;
+    width: 40px;
+  }
+  .testimonial--card .client span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .cars--and--bids--area .counter--box:before {
+    left: -10px;
+  }
+  header .logo {
+    min-width: 122px;
+    max-width: 122px;
+    margin-right: 0;
+  }
+  header .button {
+    padding: 6px 9px;
+  }
+  .live--auctions--area .category--and--sort {
+    display: block;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-bottom: 14px;
+  }
+  .live--auctions--area .category--and--sort .sort--by {
+    width: 100%;
+  }
+  .filtered--options {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 992;
+  }
+  .cars--and--bids--area .counter--box.three:before {
+    display: none;
+  }
+  .footer--box form input,
+  .footer--box form button {
+    height: 48px;
+  }
+  .hero--slider .featured--car .category {
+    font-size: 14px;
+    padding: 6px 12px;
+    line-height: normal;
+  }
+  .header--right .nice-select span,
+  .header--right .nice-select li {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--heading-color);
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .header--right {
+    gap: 9px;
+  }
+  header form {
+    width: 300px;
+  }
+  .hero--slider .featured--car .more--info p {
+    font-size: 14px;
+  }
+  .live--auctions--area .category--and--sort .sort--by {
+    display: block;
+  }
+  .live--auctions--area .category--and--sort .sort--by ul {
+    gap: 12px;
+  }
+  .filtered--options.mt_30 {
+    margin-top: 20px;
+  }
+  .car--card .card--footer .button {
+    padding: 8px 10px;
+  }
+  .cars--and--bids--area [class*="col-"] {
+    max-width: 50%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+  .live--auctions--area .nice-select,
+  .live--auctions--area .nice-select span {
+    font-size: 15px;
+  }
+  .testimonial--area .owl-stage {
+    margin-left: -20px;
+  }
+  .testimonial--area .owl-dots {
+    margin-top: 24px;
+  }
+  .testimonial--area .owl-dots button {
+    width: 14px;
+    height: 14px;
+  }
+  .testimonial--area .owl-dots button.active {
+    width: 30px;
+    background-color: var(--primary-color);
+  }
+  .footer--box h4 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .footer--box li a {
+    margin-top: 16px;
+  }
+  .footer--box form input,
+  .footer--box form button {
+    height: 42px;
+  }
+  .footer--box:nth-child(5) {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .footer--box form {
+    width: 95%;
+  }
+  .footer--box form button {
+    width: 103px;
+    font-size: 15px;
+  }
+  .footer--bottom {
+    margin-top: 50px;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+  .car--card .bid--info p {
+    font-size: 14px;
+  }
+  .cars--and--bids--area .counter--box h4 {
+    margin-bottom: 0px;
+  }
+  .filter--and--category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .mobile--login--btn a {
+    padding: 7px 28px;
+    font-size: 16px !important;
+  }
+  .mobile--logout--btn a{
+    padding: 7px 28px;
+    font-size: 16px !important;
+  }
+  .advantage--card:before {
+    display: none;
+  }
+  .car--stepform--popup {
+    padding: 30px 20px 30px;
+  }
+  .car--stepform--popup .top--logo--area img {
+    width: 160px;
+    height: 52px;
+    padding-bottom: 10px;
+  }
+  .car--stepform--popup .pop--close {
+    top: 14px;
+    right: 14px;
+  }
+  .car--stepform--popup .pop--close svg {
+    height: 30px;
+    width: 30px;
+  }
+  .car--stepform--popup .top--logo--area h3 {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .car--stepform--popup .top--logo--area p {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: normal;
+  }
+  .car--stepform--popup .steps--indicators {
+    width: 70%;
+  }
+  .car--stepform--popup .indicator .indicator-circle {
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .car--stepform--popup .steps--indicators img {
+    top: 22px;
+    width: 70%;
+  }
+  .car--stepform--popup .indicator p {
+    font-size: 15px;
+    margin-left: -5px;
+  }
+  .car--stepform--popup h4,
+  .profile--history--area h5 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .car--stepform--popup .info--box,
+  .profile--history--area .box--info {
+    padding: 0 16px 16px;
+  }
+  .car--stepform--popup .info--box .mt_25 {
+    margin-top: 14px;
+  }
+  .car--stepform--popup label,
+  .radio--box h5,
+  .profile--history--area form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .car--stepform--popup .car--details {
+    margin-top: 26px;
+  }
+  .car--stepform--popup .vin--number {
+    gap: 10px;
+  }
+  .car--stepform--popup .vin--number .button {
+    padding: 7px 24px;
+  }
+  .car--stepform--popup input,
+  .car--stepform--popup textarea,
+  .car--stepform--popup .nice-select,
+  .profile--history--area input,
+  .profile--history--area .nice-select,
+  .profile--history--area textarea {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+  }
+  .car--stepform--popup textarea,
+  .profile--history--area textarea {
+    height: 120px;
+    line-height: normal;
+    padding-top: 10px;
+  }
+  .car--stepform--popup .radio--box label {
+    padding: 8px 10px;
+  }
+  .car--stepform--popup .form--btn {
+    padding: 7px;
+    margin-top: 20px;
+  }
+  .car--stepform--popup .nice-select,
+  .car--stepform--popup .nice-select span {
+    font-size: 14px;
+  }
+  .car--stepform--popup .radio--box .radio--options {
+    gap: 10px;
+  }
+  .reserve--price.mt_35,
+  .photos.mt_35 {
+    margin-top: 24px;
+  }
+  .car--stepform--popup .photos h5,
+  .car--stepform--popup .photos p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .car--stepform--popup .dash--upload--box {
+    margin-top: 20px;
+  }
+  .car--stepform--popup label {
+    line-height: normal;
+  }
+  .car--stepform--popup label span {
+    font-size: 14px;
+  }
+  .car--stepform--popup .set-inputs {
+    gap: 10px;
+  }
+  .car--stepform--popup .set-inputs input:nth-child(1) {
+    width: 80px;
+  }
+  .sell--car--hero--area {
+    padding: 132px 0 60px;
+  }
+  .our--auction--area {
+    padding: 50px 0;
+  }
+  .our--auction--area .section--title.mb_30 {
+    margin-bottom: 6px;
+  }
+  .auction--card h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .auction--card {
+    padding: 16px;
+  }
+  .auction--card p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .how--works--area .section--title.mb_60 {
+    margin-bottom: 30px;
+  }
+  .how--works--area .step--box p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .how--works--area .step--box {
+    padding: 16px;
+    border-radius: 6px;
+    margin-left: 50px;
+    width: calc(100% - 50px);
+  }
+  .how--works--area .step--box.right:before {
+    right: auto;
+    left: -33px;
+    width: 44px;
+    height: 54px;
+  }
+  .how--works--area .step--box:before {
+    left: -34px;
+    height: 54px;
+    width: 44px;
+  }
+  .how--works--area .step--box.right {
+    margin-left: 50px;
+  }
+  .how--works--area {
+    padding-bottom: 102px;
+  }
+  .advantage--area {
+    padding: 50px 0 60px;
+  }
+  .advantage--area .section--title.mb_30 {
+    margin-bottom: 12px;
+  }
+  .advantage--card .icon {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 14px;
+  }
+  .advantage--card h4 {
+    font-size: 18px;
+  }
+  .advantage--card p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .recent--sale--area {
+    padding: 50px 0 60px;
+  }
+  .faq--area {
+    padding: 50px 0 0;
+  }
+  .section--title p {
+    width: 100%;
+    font-size: 15px;
+    line-height: normal;
+  }
+  .faq--box .box--title h4 {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .faq--box .box--title {
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+  }
+  .faq--box .accordion-item button {
+    font-size: 15px;
+  }
+  .faq--box .accordion-item .accordion-body {
+    padding: 12px 10px;
+    font-size: 15px;
+  }
+  .faq--box .accordion-item {
+    margin-top: 18px;
+  }
+  .faq--box {
+    padding: 14px;
+    min-height: auto;
+  }
+  .faq--box.contact--box {
+    height: 272px;
+    margin-top: 20px;
+  }
+  .faq--box.contact--box .button {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .faq--box.contact--box a {
+    font-size: 15px;
+  }
+  .faq--box .box--title h4 {
+    font-size: 16px;
+  }
+  .testimonial--area {
+    padding: 60px 0;
+    padding-left: 20px;
+  }
+  .how--works--area .steps--inner .progress--bar {
+    height: 550px;
+  }
+  .live--auctions--area.auction--result {
+    padding-top: 110px;
+  }
+  .pagination--wrap li a {
+    padding: 1px 12px;
+    font-size: 14px;
+  }
+  .live--auctions--area.auction--result .mt_95 {
+    margin-top: 30px;
+  }
+  .filtered--options {
+    padding: 14px;
+  }
+  .working--process--area .nav-link {
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+  .working--process--area .tab-pane .img--area img,
+  .about--us--area .img--area {
+    height: 270px;
+  }
+  .working--process--area .video--popup {
+    padding: 30px;
+  }
+  .video--popup svg {
+    height: 50px;
+    width: 50px;
+  }
+  .about--us--area {
+    padding: 85px 0 20px;
+  }
+  .about--us--area .about--content h1 {
+    font-size: 22px;
+    margin-top: 0;
+  }
+  .about--us--area .about--content p {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 12px;
+  }
+  .about--us--area .about--content ul li,
+  .details--and--morearea .details ul li {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .about--us--area .car--review img {
+    height: 70px;
+    width: 70px;
+  }
+  .about--us--area .car--review h4 {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  .about--us--area .car--review p {
+    font-size: 15px;
+  }
+  .about--us--area .car--review {
+    gap: 14px;
+  }
+  .about--us--area .car--review {
+    margin-top: 28px;
+    padding: 30px 0;
+    gap: 14px;
+  }
+  .working--process--area {
+    padding: 60px 0 70px;
+  }
+  .working--process--area .section--title h3 {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .working--process--area .section--title p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .working--process--area .nav-link {
+    padding: 4px;
+    font-size: 14px;
+  }
+  .working--process--area .nav {
+    margin-top: 16px;
+    margin-bottom: 0 !important;
+  }
+  .tab-content.mt_65 {
+    margin-top: 0px;
+  }
+  .working--process--area .car--contents h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .working--process--area .car--contents p,
+  .working--process--area .car--contents li {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .working--process--area .car--contents h4 {
+    margin-bottom: 10px;
+  }
+  .working--process--area .video--popup a {
+    height: 50px;
+    width: 50px;
+  }
+  .single--car--hero .name--area {
+    display: block;
+  }
+  .single--car--hero .btn--group {
+    margin-top: 20px;
+  }
+  .step-bid--popup .step .car--details img {
+    height: 194px;
+  }
+  .step-bid--popup .step .common-car--title h3 {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .place--bid--wrapper .button {
+    position: relative;
+    right: auto;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .place--bid--wrapper .single--info {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .single--car--hero .name--area h1 {
+    font-size: 22px;
+  }
+  .single--car--hero .name--area p {
+    font-size: 15px;
+  }
+  .single--car--hero .name--area a {
+    padding: 5px 10px;
+    font-size: 15px;
+    gap: 6px;
+  }
+  .single--car--hero .name--area a svg {
+    width: 16px;
+    height: 16px;
+  }
+  .single--car--hero .single--car--images.mt_25 {
+    margin-top: 10px;
+  }
+  .single--car--hero .single--car--images.mb_40 {
+    margin-bottom: 20px;
+  }
+  .place--bid--wrapper .single--info p {
+    font-size: 15px;
+  }
+  .details--and--morearea .car-details-table--wrapper .title {
+    display: block;
+  }
+  .table--wrapper .table .tt,
+  .table--wrapper .table .td {
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+  .details--and--morearea .single--review {
+    padding: 43px 0px 0px;
+  }
+  .details--and--morearea .single--review .profile p {
+    font-size: 18px;
+  }
+  .details--and--morearea .single--review .message {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: normal;
+  }
+  .details--and--morearea .mt_65 {
+    margin-top: 40px;
+  }
+  .details--and--morearea .details h4,
+  .car--videos h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .bid--popup {
+    padding: 26px 16px;
+  }
+  .bid--popup .logo img {
+    width: 155px;
+    height: 43px;
+  }
+  .bid--popup .close--pop {
+    position: absolute;
+    top: 8px;
+    right: 3px;
+  }
+  .bid--popup .close--pop svg {
+    width: 30px;
+    height: 30px;
+  }
+  .step-bid--popup .step .common-car--title {
+    padding: 15px 0 16px;
+  }
+  .step-bid--popup .step .common-car--title ul li {
+    font-size: 15px;
+  }
+  .step-bid--popup .step .common-car--title ul {
+    gap: 16px;
+  }
+  .bid--popup .input--group label span {
+    font-size: 15px;
+  }
+  .common-input .input--group input {
+    height: 45px;
+    padding: 0 16px;
+  }
+  .step-bid--popup .step .usd input:first-child {
+    width: 87px;
+  }
+  .step-bid--popup .step .usd {
+    gap: 10px;
+  }
+  .bid--popup .button {
+    margin-top: 12px;
+    padding: 8px;
+    font-size: 15px;
+  }
+  .bid--popup .button:first-child {
+    margin-top: 30px;
+  }
+  .step-bid--popup .step .biding--information h4 {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 11px;
+  }
+  .step-bid--popup .step .biding--information ul {
+    padding: 0 14px;
+  }
+  .step-bid--popup .step .biding--information ul li p {
+    font-size: 15px;
+  }
+  .step-bid--popup .step .biding--information .more--info p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .bid--popup .top--title h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .bid--popup .top--title p {
+    font-size: 15px;
+    line-height: normal;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  .bid--popup .credit--card--information h4 {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  .common-input .input--group label {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .bid--popup .input--group .nice-select {
+    height: 45px;
+    line-height: 45px;
+  }
+  .bid--popup .input--group .nice-select span {
+    font-size: 15px;
+  }
+  .register--bid--popup.bid--popup .button {
+    margin-top: 28px;
+  }
+  .profile--area .profile--name ul {
+    display: block;
+  }
+  .profile--area .profile--name ul li:before {
+    display: none;
+  }
+  .profile--history--area .nav-link {
+    font-size: 16px;
+    padding: 10px 9px;
+  }
+  .profile--history--area .nav-item:first-child .nav-link {
+    padding-left: 0;
+  }
+  .profile--history--area form,
+  .delete--button {
+    padding: 0;
+  }
+  .profile--area .profile--contents form {
+    min-width: 98px;
+    min-height: 98px;
+    max-width: 98px;
+    max-height: 98px;
+  }
+  .profile--area .profile--contents .preview--img img {
+    width: 98px;
+    height: 98px;
+  }
+  .profile--area .profile--contents label {
+    right: 0px;
+    height: 25px;
+    width: 25px;
+    border-width: 2px;
+  }
+  .profile--area .profile--contents label svg {
+    height: 15px;
+    width: 15px;
+  }
+  .profile--area {
+    padding: 120px 0 13px;
+  }
+  .profile--area .profile--name h1 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .profile--area .profile--name {
+    margin-top: 14px;
+  }
+  .profile--area .profile--name ul {
+    margin-top: 5px;
+  }
+  .profile--area .profile--name ul li {
+    font-size: 15px;
+  }
+  .profile--area .profile--name p {
+    font-size: 15px;
+    line-height: normal;
+    margin-top: 16px;
+    padding-bottom: 24px;
+  }
+  .nav--wrapper {
+    overflow-x: auto;
+  }
+  .nav--wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .nav--wrapper .nav {
+    width: 400px;
+  }
+  .profile--history--area .tab-pane h3 {
+    font-size: 18px;
+    line-height: normal;
+    margin: 6px 0 0;
+  }
+  .profile--history--area .mt_20 {
+    margin-top: 20px;
+  }
+  .profile--history--area {
+    padding-bottom: 60px;
+  }
+  .profile--history--area .tab-pane .mt_25 {
+    margin-top: 14px;
+  }
+  .profile--history--area .public--info.mt_35 {
+    margin-top: 10px !important;
+  }
+  .buttons.mt_30 {
+    margin-top: 16px;
+  }
+  .delete--button {
+    margin-top: 26px;
+  }
+  .auction--comment--card .img--area {
+    height: 240px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .auction--comment--card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .auction--comment--card .details--area h3 {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .auction--comment--card .details--area .date {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .bidder--profile--history {
+    padding-bottom: 80px;
+  }
+  .auction--comment--card .details--area {
+    width: 100%;
+  }
+  .bidder--profile--history h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .bidder--profile--history h4 span {
+    font-size: 14px;
+  }
+  .bid--history {
+    padding-bottom: 35px;
+  }
+  .auction--comments.mt_45 {
+    margin-top: 28px;
+  }
+  .auction--comment--card {
+    margin-top: 24px;
+  }
+  .auction--comment--card .details--area span {
+    font-size: 15px;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+  .auction--comment--card .details--area .replay p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .auction--comment--card .details--area .replay .icon {
+    width: 42px;
+    height: 42px;
+  }
+  .buttons.mt_55 {
+    margin-top: 40px;
+  }
+  .bidder--profile--history {
+    padding-bottom: 60px;
+  }
+  .auth--form {
+    padding: 40px 20px;
+  }
+  .auth--form input {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 15px;
+  }
+  .account--reminder {
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  .auth--title h1 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .auth--form.login--form {
+    padding-top: 58px;
+  }
+  .auth--title p {
+    font-size: 15px;
+    margin-bottom: 40px;
+    width: 286px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .auth--form .input--group {
+    margin-top: 20px;
+  }
+  .input--group .eye {
+    height: 16px;
+    width: 16px;
+  }
+  .auth--form .forgot--pass--area a {
+    font-size: 15px;
+  }
+  .auth--area .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .auth--form .divider {
+    margin-top: 30px;
+  }
+  .ssl--login {
+    padding: 9px;
+    gap: 7px;
+    font-size: 15px;
+    margin-top: 30px;
+  }
+  .ssl--login img {
+    height: 22px;
+    width: 22px;
+  }
+  .form-group label {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .hero--area .section--title.mb_35 {
+    margin-bottom: 0px;
+  }
+  .sec--title {
+    font-size: 22px;
+  }
+  .hero--area {
+    padding: 160px 0 70px;
+  }
+  .hero--slider .featured--car h3 {
+    font-size: 17px;
+    width: 100%;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  .car--card .img--area {
+    height: 200px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 38px;
+  }
+  .testimonial--area {
+    padding: 70px 0;
+    padding-left: 20px;
+  }
+  .testimonial--card {
+    padding: 20px;
+  }
+  .hero--slider .featured--car {
+    background-size: 100% 100%;
+    height: 260px;
+    padding: 16px;
+  }
+  .menu--search--wrapp {
+    padding-left: 16px;
+    padding-top: 88px;
+  }
+  .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .hero--area {
+    padding: 96px 0 40px;
+  }
+  .more--photos--box {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .live--auctions--area {
+    padding-bottom: 100px;
+  }
+  .testimonial--card .message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    margin-bottom: 80px;
+  }
+  .testimonial--area .sec--title.mb_95 {
+    margin-bottom: 50px;
+  }
+  .testimonial--card .rating {
+    top: 16px;
+    padding: 5px 12px;
+    font-size: 18px;
+    bottom: auto;
+    left: 22px;
+    right: auto;
+  }
+  .testimonial--card .rating svg {
+    width: 52px;
+  }
+  .footer--box {
+    margin-top: 40px;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .footer--box:nth-child(5) {
+    max-width: 56%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 56%;
+    flex: 0 0 56%;
+  }
+  .slider-right-box img,
+  .more--photos--box {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 230px;
+  }
+  footer {
+    padding-top: 30px;
+  }
+  footer .custom--row {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .owl-nav button {
+    height: 36px;
+    width: 36px;
+  }
+  .live--auctions--area .category--and--sort .sort--by ul li {
+    font-size: 14px;
+    padding: 0;
+  }
+  .live--auctions--area .category--and--sort .sort--by p {
+    font-size: 14px;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 20px;
+  }
+  .car--card .car--model a {
+    font-size: 17px;
+    line-height: normal;
+  }
+  .cars--and--bids--area .counter--box h4,
+  .cars--and--bids--area .counter--box h4 p {
+    font-size: 24px;
+  }
+  .cars--and--bids--area .counter--box p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .section--title.mb_95 {
+    margin-bottom: 26px;
+  }
+  .testimonial--card .message {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-top: 46px;
+  }
+  .testimonial--card .client p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  footer .logo-box img {
+    width: 186px;
+    height: 40px;
+    margin-bottom: 26px;
+  }
+  header {
+    padding: 16px 0;
+  }
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+  img.mfp-img {
+    min-width: 400px !important;
+    max-width: 400px !important;
+  }
+  .section--title.mb_50 {
+    margin-bottom: 22px;
+  }
+  .live--auctions--area .category--and--sort .nice-select {
+    width: 260px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .live--auctions--area {
+    padding-bottom: 70px;
+  }
+  .live--auctions--area .mt_70 {
+    margin-top: 30px;
+  }
+  .cars--and--bids--area {
+    padding: 60px 0;
+  }
+  .cars--and--bids--area .section--title h3 {
+    margin-bottom: 12px;
+  }
+  .testimonial--card .client img {
+    height: 40px;
+    width: 40px;
+  }
+  .testimonial--card .client span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .cars--and--bids--area .counter--box:before {
+    left: -10px;
+  }
+  header .logo {
+    min-width: 106px;
+    max-width: 106px;
+    margin-right: 0;
+  }
+  header .button {
+    padding: 6px 6px;
+    font-size: 14px;
+  }
+  .live--auctions--area .category--and--sort {
+    display: block;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .live--auctions--area .category--and--sort .sort--by {
+    width: 100%;
+  }
+  .filtered--options {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .cars--and--bids--area .counter--box.three:before {
+    display: none;
+  }
+  .footer--box form input,
+  .footer--box form button {
+    height: 48px;
+  }
+  .hero--slider .featured--car .category {
+    font-size: 14px;
+    padding: 6px 12px;
+    line-height: normal;
+  }
+  .header--right .nice-select span,
+  .header--right .nice-select li {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--heading-color);
+  }
+  .container {
+    padding: 0 12px;
+  }
+  .header--right {
+    gap: 6px;
+  }
+  header form {
+    width: 270px;
+  }
+  .hero--slider .featured--car .more--info p {
+    font-size: 14px;
+  }
+  .live--auctions--area .category--and--sort .sort--by {
+    display: block;
+  }
+  .live--auctions--area .category--and--sort .sort--by ul {
+    gap: 12px;
+  }
+  .filtered--options.mt_30 {
+    margin-top: 20px;
+  }
+  .car--card .card--footer .button {
+    padding: 8px 10px;
+  }
+  .cars--and--bids--area [class*="col-"] {
+    max-width: 50%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+  .live--auctions--area .nice-select,
+  .live--auctions--area .nice-select span {
+    font-size: 15px;
+  }
+  .testimonial--area .owl-stage {
+    margin-left: -20px;
+  }
+  .testimonial--area .owl-dots {
+    margin-top: 24px;
+  }
+  .testimonial--area .owl-dots button {
+    width: 14px;
+    height: 14px;
+  }
+  .testimonial--area .owl-dots button.active {
+    width: 30px;
+    background-color: var(--primary-color);
+  }
+  .footer--box h4 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .footer--box li a {
+    margin-top: 16px;
+  }
+  .footer--box form input,
+  .footer--box form button {
+    height: 42px;
+  }
+  .footer--box:nth-child(5) {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .footer--box form {
+    width: 95%;
+  }
+  .footer--box form button {
+    width: 103px;
+    font-size: 15px;
+  }
+  .footer--bottom {
+    margin-top: 50px;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+  .car--card .bid--info p {
+    font-size: 14px;
+  }
+  .cars--and--bids--area .counter--box h4 {
+    margin-bottom: 0px;
+  }
+  .header-right .nice-select {
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 24px;
+  }
+  .filter--and--category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .mobile--login--btn a {
+    padding: 7px 28px;
+    font-size: 16px !important;
+  }
+  .mobile--logout--btn a{
+    padding: 7px 28px;
+    font-size: 16px !important;
+  }
+  .car--stepform--popup {
+    padding: 30px 20px 30px;
+  }
+  .car--stepform--popup .top--logo--area img {
+    width: 160px;
+    height: 52px;
+    padding-bottom: 10px;
+  }
+  .car--stepform--popup .pop--close {
+    top: 14px;
+    right: 14px;
+  }
+  .car--stepform--popup .pop--close svg {
+    height: 30px;
+    width: 30px;
+  }
+  .car--stepform--popup .top--logo--area h3 {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .car--stepform--popup .top--logo--area p {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: normal;
+  }
+  .car--stepform--popup .steps--indicators {
+    width: 70%;
+  }
+  .car--stepform--popup .indicator .indicator-circle {
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .car--stepform--popup .steps--indicators img {
+    top: 22px;
+    width: 70%;
+  }
+  .car--stepform--popup .indicator p {
+    font-size: 15px;
+    margin-left: -5px;
+  }
+  .car--stepform--popup h4,
+  .profile--history--area h5 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .car--stepform--popup .info--box,
+  .profile--history--area .box--info {
+    padding: 0 16px 16px;
+  }
+  .car--stepform--popup .info--box .mt_25 {
+    margin-top: 14px;
+  }
+  .car--stepform--popup label,
+  .radio--box h5,
+  .profile--history--area form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .car--stepform--popup .car--details {
+    margin-top: 26px;
+  }
+  .car--stepform--popup .vin--number {
+    gap: 10px;
+  }
+  .car--stepform--popup .vin--number .button {
+    padding: 7px 24px;
+  }
+  .car--stepform--popup input,
+  .car--stepform--popup textarea,
+  .car--stepform--popup .nice-select,
+  .profile--history--area input,
+  .profile--history--area .nice-select,
+  .profile--history--area textarea {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+  }
+  .car--stepform--popup textarea,
+  .profile--history--area textarea {
+    height: 120px;
+    line-height: normal;
+    padding-top: 10px;
+  }
+  .car--stepform--popup .radio--box label {
+    padding: 8px 10px;
+  }
+  .car--stepform--popup .form--btn {
+    padding: 7px;
+    margin-top: 20px;
+  }
+  .car--stepform--popup .nice-select,
+  .car--stepform--popup .nice-select span {
+    font-size: 14px;
+  }
+  .car--stepform--popup .radio--box .radio--options {
+    gap: 10px;
+  }
+  .reserve--price.mt_35,
+  .photos.mt_35 {
+    margin-top: 24px;
+  }
+  .car--stepform--popup .photos h5,
+  .car--stepform--popup .photos p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .car--stepform--popup .dash--upload--box {
+    margin-top: 20px;
+  }
+  .car--stepform--popup label {
+    line-height: normal;
+  }
+  .car--stepform--popup label span {
+    font-size: 14px;
+  }
+  .car--stepform--popup .set-inputs {
+    gap: 10px;
+  }
+  .car--stepform--popup .set-inputs input:nth-child(1) {
+    width: 80px;
+  }
+  .sell--car--hero--area {
+    padding: 132px 0 60px;
+  }
+  .our--auction--area {
+    padding: 50px 0;
+  }
+  .our--auction--area .section--title.mb_30 {
+    margin-bottom: 6px;
+  }
+  .auction--card h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .auction--card {
+    padding: 16px;
+  }
+  .auction--card p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .how--works--area .section--title.mb_60 {
+    margin-bottom: 30px;
+  }
+  .how--works--area .step--box p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .how--works--area .step--box {
+    padding: 16px;
+    border-radius: 6px;
+    margin-left: 50px;
+    width: calc(100% - 50px);
+  }
+  .how--works--area .step--box.right:before {
+    right: auto;
+    left: -33px;
+    width: 44px;
+    height: 54px;
+  }
+  .how--works--area .step--box:before {
+    left: -34px;
+    height: 54px;
+    width: 44px;
+  }
+  .how--works--area .step--box.right {
+    margin-left: 50px;
+  }
+  .how--works--area {
+    padding-bottom: 102px;
+  }
+  .advantage--area {
+    padding: 50px 0 60px;
+  }
+  .advantage--area .section--title.mb_30 {
+    margin-bottom: 12px;
+  }
+  .advantage--card .icon {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 14px;
+  }
+  .advantage--card h4 {
+    font-size: 18px;
+  }
+  .advantage--card p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .recent--sale--area {
+    padding: 50px 0 60px;
+  }
+  .faq--area {
+    padding: 50px 0 0;
+  }
+  .section--title p {
+    width: 100%;
+    font-size: 15px;
+    line-height: normal;
+  }
+  .faq--box .box--title h4 {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .faq--box .box--title {
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+  }
+  .faq--box .accordion-item button {
+    font-size: 15px;
+  }
+  .faq--box .accordion-item .accordion-body {
+    padding: 12px 10px;
+    font-size: 15px;
+  }
+  .faq--box .accordion-item {
+    margin-top: 18px;
+  }
+  .faq--box {
+    padding: 14px;
+    min-height: auto;
+  }
+  .faq--box.contact--box {
+    height: 272px;
+    margin-top: 20px;
+  }
+  .faq--box.contact--box .button {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .faq--box.contact--box a {
+    font-size: 15px;
+  }
+  .faq--box .box--title h4 {
+    font-size: 16px;
+  }
+  .testimonial--area {
+    padding: 60px 0;
+    padding-left: 20px;
+  }
+  .how--works--area .steps--inner .progress--bar {
+    height: 550px;
+  }
+  .advantage--card:before {
+    display: none;
+  }
+  .advantage--card .icon svg {
+    height: 32px;
+    width: 32px;
+  }
+  .live--auctions--area.auction--result {
+    padding-top: 110px;
+  }
+  .pagination--wrap li a {
+    padding: 1px 12px;
+    font-size: 14px;
+  }
+  .live--auctions--area.auction--result .mt_95 {
+    margin-top: 30px;
+  }
+  .filtered--options {
+    padding: 14px;
+  }
+  .live--auctions--area .section--title.mb_50 {
+    margin-bottom: 0px;
+  }
+  .working--process--area {
+    padding: 60px 0 70px;
+  }
+  .working--process--area .section--title h3 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .working--process--area .section--title p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .working--process--area .nav-link {
+    padding: 4px;
+    font-size: 14px;
+  }
+  .working--process--area .nav {
+    margin-top: 16px;
+    margin-bottom: 0 !important;
+  }
+  .tab-content.mt_65 {
+    margin-top: 0px;
+  }
+  .working--process--area .car--contents h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .working--process--area .car--contents p,
+  .working--process--area .car--contents li {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .working--process--area .car--contents h4 {
+    margin-bottom: 10px;
+  }
+  .working--process--area .video--popup a {
+    height: 50px;
+    width: 50px;
+  }
+  .about--us--area .img--area,
+  .working--process--area .tab-pane .img--area img {
+    height: 270px;
+  }
+  .about--us--area {
+    padding: 68px 0 20px;
+  }
+  .about--us--area .about--content h1 {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+  .about--us--area .about--content p,
+  .about--us--area .about--content ul li,
+  .details--and--morearea .details ul li {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .about--us--area .car--review img {
+    height: 70px;
+    width: 70px;
+  }
+  .about--us--area .car--review {
+    margin-top: 0px;
+    gap: 14px;
+  }
+  .about--us--area .car--review h4 {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  .about--us--area .car--review p {
+    font-size: 14px;
+    line-height: normal;
+    width: 100%;
+  }
+  .single--car--hero .name--area {
+    display: block;
+  }
+  .single--car--hero .btn--group {
+    margin-top: 20px;
+  }
+  .step-bid--popup .step .car--details img {
+    height: 222px;
+  }
+  .step-bid--popup .step .common-car--title h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .place--bid--wrapper .button {
+    position: relative;
+    right: auto;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .place--bid--wrapper .single--info {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .single--car--hero .name--area h1 {
+    font-size: 22px;
+  }
+  .single--car--hero .name--area p {
+    font-size: 15px;
+  }
+  .single--car--hero .name--area a {
+    padding: 5px 10px;
+    font-size: 15px;
+    gap: 6px;
+  }
+  .single--car--hero .name--area a svg {
+    width: 16px;
+    height: 16px;
+  }
+  .single--car--hero .single--car--images.mt_25 {
+    margin-top: 10px;
+  }
+  .single--car--hero .single--car--images.mb_40 {
+    margin-bottom: 20px;
+  }
+  .place--bid--wrapper .single--info p {
+    font-size: 15px;
+  }
+  .details--and--morearea .car-details-table--wrapper .title {
+    display: block;
+  }
+  .table--wrapper .table .tt,
+  .table--wrapper .table .td {
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+  .details--and--morearea .single--review {
+    padding: 43px 0px 0px;
+  }
+  .details--and--morearea .single--review .profile p {
+    font-size: 18px;
+  }
+  .details--and--morearea .single--review .message {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: normal;
+  }
+  .details--and--morearea .mt_65 {
+    margin-top: 40px;
+  }
+  .details--and--morearea .details h4,
+  .car--videos h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .footer--box li a {
+    margin-top: 15px;
+  }
+  .bid--popup {
+    padding: 26px 16px;
+  }
+  .bid--popup .logo img {
+    width: 155px;
+    height: 43px;
+  }
+  .bid--popup .close--pop {
+    position: absolute;
+    top: 8px;
+    right: 3px;
+  }
+  .bid--popup .close--pop svg {
+    width: 30px;
+    height: 30px;
+  }
+  .step-bid--popup .step .common-car--title {
+    padding: 15px 0 16px;
+  }
+  .step-bid--popup .step .common-car--title ul li {
+    font-size: 14px;
+  }
+  .step-bid--popup .step .common-car--title ul {
+    gap: 16px;
+  }
+  .bid--popup .input--group label span {
+    font-size: 15px;
+  }
+  .common-input .input--group input {
+    height: 45px;
+    padding: 0 16px;
+  }
+  .step-bid--popup .step .usd input:first-child {
+    width: 87px;
+  }
+  .step-bid--popup .step .usd {
+    gap: 10px;
+  }
+  .bid--popup .button {
+    margin-top: 12px;
+    padding: 8px;
+    font-size: 15px;
+  }
+  .bid--popup .button:first-child {
+    margin-top: 30px;
+  }
+  .step-bid--popup .step .biding--information h4 {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 11px;
+  }
+  .step-bid--popup .step .biding--information ul {
+    padding: 0 14px;
+  }
+  .step-bid--popup .step .biding--information ul li p {
+    font-size: 14px;
+  }
+  .step-bid--popup .step .biding--information .more--info p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .common-input .input--group label {
+    font-size: 14px;
+  }
+  .bid--popup .top--title h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .bid--popup .top--title p {
+    font-size: 15px;
+    line-height: normal;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  .bid--popup .credit--card--information h4 {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  .common-input .input--group label {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .bid--popup .input--group .nice-select {
+    height: 45px;
+    line-height: 45px;
+  }
+  .bid--popup .input--group .nice-select span {
+    font-size: 15px;
+  }
+  .register--bid--popup.bid--popup .button {
+    margin-top: 28px;
+  }
+  .profile--area .profile--name ul {
+    display: block;
+  }
+  .profile--area .profile--name ul li:before {
+    display: none;
+  }
+  .profile--history--area .nav-link {
+    font-size: 16px;
+    padding: 10px 9px;
+  }
+  .profile--history--area form,
+  .delete--button {
+    padding: 0;
+  }
+  .profile--area .profile--contents form {
+    min-width: 98px;
+    min-height: 98px;
+    max-width: 98px;
+    max-height: 98px;
+  }
+  .profile--area .profile--contents .preview--img img {
+    width: 98px;
+    height: 98px;
+  }
+  .profile--area .profile--contents label {
+    right: 0px;
+    height: 25px;
+    width: 25px;
+    border-width: 2px;
+  }
+  .profile--area .profile--contents label svg {
+    height: 15px;
+    width: 15px;
+  }
+  .profile--area {
+    padding: 120px 0 13px;
+  }
+  .profile--area .profile--name h1 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .profile--area .profile--name {
+    margin-top: 14px;
+  }
+  .profile--area .profile--name ul {
+    margin-top: 5px;
+  }
+  .profile--area .profile--name ul li {
+    font-size: 15px;
+  }
+  .profile--area .profile--name p {
+    font-size: 15px;
+    line-height: normal;
+    margin-top: 16px;
+    padding-bottom: 24px;
+  }
+  .nav--wrapper {
+    overflow-x: auto;
+  }
+  .nav--wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .nav--wrapper .nav {
+    width: 400px;
+  }
+  .profile--history--area .tab-pane h3 {
+    font-size: 18px;
+    line-height: normal;
+    margin: 6px 0 0;
+  }
+  .profile--history--area .mt_20 {
+    margin-top: 20px;
+  }
+  .profile--history--area {
+    padding-bottom: 60px;
+  }
+  .nav--wrapper {
+    overflow-x: auto;
+  }
+  .nav--wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .nav--wrapper .nav {
+    width: 400px;
+  }
+  .profile--history--area .tab-pane h3 {
+    font-size: 18px;
+    line-height: normal;
+    margin: 6px 0 0;
+  }
+  .profile--history--area .mt_20 {
+    margin-top: 20px;
+  }
+  .profile--history--area {
+    padding-bottom: 60px;
+  }
+  .profile--history--area .tab-pane .mt_25 {
+    margin-top: 14px;
+  }
+  .profile--history--area .public--info.mt_35 {
+    margin-top: 10px !important;
+  }
+  .buttons.mt_30 {
+    margin-top: 16px;
+  }
+  .delete--button {
+    margin-top: 26px;
+  }
+  .auction--comments.mt_45 {
+    margin-top: 28px;
+  }
+  .auction--comment--card {
+    margin-top: 24px;
+  }
+  .auction--comment--card .details--area span {
+    font-size: 15px;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+  .auction--comment--card .details--area .replay p {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .auction--comment--card .details--area .replay .icon {
+    width: 42px;
+    height: 42px;
+  }
+  .buttons.mt_55 {
+    margin-top: 40px;
+  }
+  .bidder--profile--history {
+    padding-bottom: 60px;
+  }
+  .bidder--profile--history h4 {
+    font-size: 19px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .bidder--profile--history h4 span {
+    font-size: 14px;
+  }
+  .auction--comment--card {
+    display: block;
+  }
+  .auction--comment--card .details--area {
+    width: 100%;
+  }
+  .auction--comment--card .img--area {
+    height: 248px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .auction--comment--card .details--area h3 {
+    font-size: 18px;
+    line-height: normal;
+    margin-top: 20px;
+  }
+  .auction--comment--card .details--area .date {
+    font-size: 14px;
+  }
+  .auth--form {
+    padding: 40px 20px;
+  }
+  .auth--form input {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 15px;
+  }
+  .account--reminder {
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  .auth--title h1 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .auth--form.login--form {
+    padding-top: 58px;
+  }
+  .auth--title p {
+    font-size: 15px;
+    margin-bottom: 40px;
+    width: 286px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .auth--form .input--group {
+    margin-top: 20px;
+  }
+  .input--group .eye {
+    height: 16px;
+    width: 16px;
+  }
+  .auth--form .forgot--pass--area a {
+    font-size: 15px;
+  }
+  .auth--area .button {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  .auth--form .divider {
+    margin-top: 30px;
+  }
+  .ssl--login {
+    padding: 9px;
+    gap: 7px;
+    font-size: 15px;
+    margin-top: 30px;
+  }
+  .ssl--login img {
+    height: 22px;
+    width: 22px;
+  }
+  .form-group label {
+    font-size: 15px;
+  }
+}
