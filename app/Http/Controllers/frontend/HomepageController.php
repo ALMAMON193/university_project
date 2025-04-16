@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class HomepageController extends Controller
 {
   // return the view of index.php
-  public function index()
+  public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
   {
     // calling the data
     $cms = CMS_Content::all();
