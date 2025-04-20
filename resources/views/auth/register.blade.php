@@ -7,7 +7,7 @@
             <div class="auth--row">
                 <!-- auth img  -->
                 <div class="auth--img">
-                    <img class="w-100" src="{{ asset('frontend/images/auth.png') }}" alt="" />
+                    <img class="w-100" src="{{ asset('frontend/images/auth.jpg') }}" alt="" />
                 </div>
                 <!-- auth form  -->
                 <div class="auth--form login--form">

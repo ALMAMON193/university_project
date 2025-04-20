@@ -10,7 +10,7 @@
         <div class="custom-row">
             <!-- logo  -->
             <a href="{{ route('home-page') }}" class="logo">
-                <img src="{{ $header_cms[1]->image_url ? $header_cms[1]->image_url : asset('frontend/images/logo.png') }}"
+                <img src="{{ $header_cms[1]->image_url ? $header_cms[1]->image_url : asset('frontend/images/logo.svg') }}"
                     alt="logo" />
             </a>
             <!-- menu & search -->
