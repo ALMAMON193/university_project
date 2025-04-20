@@ -10,7 +10,7 @@
         <div class="custom-row">
             <!-- logo  -->
             <a href="{{ route('home-page') }}" class="logo">
-                <img src="{{ $header_cms[1]->image_url ? $header_cms[1]->image_url : asset('frontend/images/logo.svg') }}"
+                <img src="{{ $header_cms[1]->image_url ? $header_cms[1]->image_url : asset('frontend/images/logo.png') }}"
                     alt="logo" />
             </a>
             <!-- menu & search -->
@@ -69,7 +69,7 @@
             <!-- header right -->
             <div class="header--right">
                 <!-- language  -->
-                <div class="lang--select" id="google_translate_element"></div>
+{{--                <div class="lang--select" id="google_translate_element"></div>--}}
                 {{-- <select class="lang--select">
                     <option selected value="1">English</option>
                     <option value="2">German</option>

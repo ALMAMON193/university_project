@@ -7,7 +7,7 @@
         $states = $data['states'];
         $wishlists = $user->wishlist;
 
-       
+
     @endphp
     <main>
         <!-- Profile Area :: Start  -->
@@ -243,7 +243,7 @@
                                                                 <p>
                                                                     <span>Bid</span>
                                                                     ${{ $auction->maxBid() }} ({{ $user->bids()->where('auction_id', $auction->id)->first()->bid}})
-                                                                </p>                                                                
+                                                                </p>
                                                             </div>
                                                         @endif
 
@@ -518,25 +518,25 @@
                                                     <div class="col-md-5 mt_25">
                                                         <div class="input--group">
                                                             <label for="state">State<samp>*</samp></label>
-                                                            <select class="@error('state') border border-danger @enderror"
-                                                                name="state" id="state">
-                                                                <option disabled
-                                                                    {{ $profile->state->name == 'null' ? 'selected' : '' }}
-                                                                    value="null">Select States</option>
-                                                                @foreach ($states as $key => $state)
-                                                                    @if ($key != 0)
-                                                                        <option value="{{ $state->id }}"
-                                                                            {{ $profile->state->name === $state->name ? 'selected' : '' }}>
-                                                                            {{ $state->name }}</option>
-                                                                    @endif
-                                                                @endforeach
-                                                            </select>
-                                                            @error('state')
-                                                                <p class="text-danger" style="font-size: 12px">
-                                                                    {{-- Please enter a valid email address. --}}
-                                                                    {{ $message }}
-                                                                </p>
-                                                            @enderror
+{{--                                                            <select class="@error('state') border border-danger @enderror"--}}
+{{--                                                                name="state" id="state">--}}
+{{--                                                                <option disabled--}}
+{{--                                                                    {{ $profile->state->name == 'null' ? 'selected' : '' }}--}}
+{{--                                                                    value="null">Select States</option>--}}
+{{--                                                                @foreach ($states as $key => $state)--}}
+{{--                                                                    @if ($key != 0)--}}
+{{--                                                                        <option value="{{ $state->id }}"--}}
+{{--                                                                            {{ $profile->state->name === $state->name ? 'selected' : '' }}>--}}
+{{--                                                                            {{ $state->name }}</option>--}}
+{{--                                                                    @endif--}}
+{{--                                                                @endforeach--}}
+{{--                                                            </select>--}}
+{{--                                                            @error('state')--}}
+{{--                                                                <p class="text-danger" style="font-size: 12px">--}}
+{{--                                                                    --}}{{-- Please enter a valid email address. --}}
+{{--                                                                    {{ $message }}--}}
+{{--                                                                </p>--}}
+{{--                                                            @enderror--}}
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5 mt_25">
@@ -563,7 +563,7 @@
                                         </div>
                                     </form>
                                     {{-- Credit card information --}}
-                                    {{-- <form action="{{ route('update.card.Info') }}" method="POST"
+                                     <form action="{{ route('update.card.Info') }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         @method('PATCH')
@@ -655,7 +655,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </form> --}}
+                                    </form>
                                     @if (auth()->user()->role == 'user')
                                         {{-- Ask for withdraw --}}
 

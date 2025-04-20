@@ -13,7 +13,7 @@
             <div class="footer--box logo-box">
                 <!-- footer logo  -->
                 <a href="{{ route('home-page') }}">
-                    <img src="{{ $footer_cms[1]->image_url ? $footer_cms[1]->image_url : asset('frontend/images/logo.svg') }}"
+                    <img src="{{ $footer_cms[1]->image_url ? $footer_cms[1]->image_url : asset('frontend/images/logo.png') }}"
                         alt="" />
                 </a>
                 <!-- social icons  -->
