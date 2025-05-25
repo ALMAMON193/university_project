@@ -165,7 +165,7 @@
                                     </div>
                                     <div class="car--info">
                                         @if ($auction->maxBid() == $bid->bid && $auction->end < now())
-                                            <div class="bid--info" style="background-color: #fd7f54;">
+                                            <div class="bid--info" style="background-color: #5459AC;">
                                                 <p style=" color:white;">Bid {{ $bid->bid }}</p>
                                                 <p style=" color:white;">Winner</p>
                                             </div>
@@ -289,13 +289,13 @@
                                                 viewBox="0 0 27 27" fill="none">
                                                 <path
                                                     d="M19.2266 10.3289C19.2266 14.5214 15.5866 17.9123 11.1016 17.9123L10.0941 19.1256L9.49823 19.8406C8.98907 20.4473 8.01406 20.3173 7.67823 19.5914L6.22656 16.3956C4.2549 15.0089 2.97656 12.8098 2.97656 10.3289C2.97656 6.13644 6.61656 2.74561 11.1016 2.74561C14.3732 2.74561 17.2007 4.55478 18.4682 7.15478C18.9557 8.11895 19.2266 9.19144 19.2266 10.3289Z"
-                                                    stroke="#FD7F54" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke="#5459AC" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     d="M24.6429 14.5106C24.6429 16.9914 23.3646 19.1906 21.3929 20.5773L19.9412 23.7731C19.6054 24.4989 18.6304 24.6398 18.1212 24.0223L16.5179 22.0939C13.8962 22.0939 11.5562 20.9348 10.0938 19.1256L11.1012 17.9123C15.5862 17.9123 19.2262 14.5214 19.2262 10.3289C19.2262 9.19144 18.9554 8.11895 18.4679 7.15479C22.0104 7.96729 24.6429 10.9573 24.6429 14.5106Z"
-                                                    stroke="#FD7F54" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke="#5459AC" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
-                                                <path d="M8.39844 10.3291H13.8151" stroke="#FD7F54" stroke-width="1.5"
+                                                <path d="M8.39844 10.3291H13.8151" stroke="#5459AC" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </div>

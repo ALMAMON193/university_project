@@ -37,7 +37,7 @@
 @include('frontend.partials.footer')
 
 <!-- 🆕 New Chat Button -->
-<button id="openChatModal" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 15px 25px; border: none; border-radius: 30px; background: #fd7f54; color: white; font-size: 16px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer;">
+<button id="openChatModal" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 15px 25px; border: none; border-radius: 30px; background: #5459AC; color: white; font-size: 16px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer;">
     Ask Open AI
 </button>
 

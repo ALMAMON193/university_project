@@ -31,7 +31,7 @@ return new class extends Migration {
             ['title' => 'Easy to Use', 'created_at' => now(), 'updated_at' => now()],
 
             // profile
-            ['title' => 'Saudi Cars Hubs', 'created_at' => now(), 'updated_at' => now()],
+            ['title' => 'Smart Car Auctions', 'created_at' => now(), 'updated_at' => now()],
 
 
             // how it works part
