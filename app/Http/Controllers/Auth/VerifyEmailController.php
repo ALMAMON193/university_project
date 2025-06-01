@@ -2,27 +2,36 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Verified;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 class VerifyEmailController extends Controller
 {
     /**
      * Mark the authenticated user's email address as verified.
      */
-    public function __invoke(EmailVerificationRequest $request): RedirectResponse
+    // In your VerifyEmailController
+    // In app/Http/Controllers/Auth/VerifyEmailController.php
+
+    public function __invoke(EmailVerificationRequest $request, User $user)
     {
-        if ($request->user()->hasVerifiedEmail()) {
-            return redirect(RouteServiceProvider::HOME . '?verified=1')->with('t-success', 'Email already verified.');
+        if ($user->hasVerifiedEmail()) {
+            return redirect()->intended(RouteServiceProvider::HOME . '?verified=1');
         }
 
-        if ($request->user()->markEmailAsVerified()) {
-            event(new Verified($request->user()));
+        if ($user->markEmailAsVerified()) {
+            event(new Verified($user));
         }
 
-        return redirect(RouteServiceProvider::HOME . '?verified=1')->with('t-success', 'Email verified.');
+        // Add this line to log in the user after verification
+        Auth::login($user);
+
+        return redirect()->intended(RouteServiceProvider::HOME . '?verified=1')
+            ->with('t-success', 'Email verified successfully! You are now logged in.');
     }
 }

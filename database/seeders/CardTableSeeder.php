@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CardTableSeeder extends Seeder
 {
@@ -19,7 +19,7 @@ class CardTableSeeder extends Seeder
         // Insert card
         DB::table('cards')->insert([
             [
-                'user_id' => $users['admin@email.com'],
+                'user_id' => $users['admin@gmail.com'],
                 'card_name' => null,
                 'card_number' => null,
                 'cvc' => null,
@@ -27,7 +27,7 @@ class CardTableSeeder extends Seeder
                 'created_at' => now(),
             ],
             [
-                'user_id' => $users['user@email.com'],
+                'user_id' => $users['user@gmail.com'],
                 'card_name' => 'VISA',
                 'card_number' => '1234 1234 1234 1234',
                 'cvc' => '123',

@@ -3,14 +3,16 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Notifications\EmailVerificationOtpNotification;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -23,6 +25,8 @@ class User extends Authenticatable
         'full_name',
         'email',
         'password',
+        'email_verification_otp',
+        'email_verification_otp_expires_at',
     ];
 
     /**
@@ -130,5 +134,50 @@ class User extends Authenticatable
         return $this->bids()->whereHas('auction', function ($query) {
             $query->where('status', 'approve');
         });
+    }
+    public function sendEmailVerificationOtpNotification()
+    {
+        $this->notify(new EmailVerificationOtpNotification($this->email_verification_otp));
+    }
+        /**
+     * Generate and save a new OTP
+     */
+    public function generateNewOtp(): string
+    {
+        $otp = rand(100000, 999999); // 6-digit OTP
+        $this->update([
+            'email_verification_otp' => $otp,
+            'email_verification_otp_expires_at' => now()->addMinutes(10)
+        ]);
+        return $otp;
+    }
+
+    /**
+     * Check if OTP is valid
+     */
+    public function isValidOtp(string $otp): bool
+    {
+        return $this->email_verification_otp === $otp &&
+               $this->email_verification_otp_expires_at > now();
+    }
+
+    /**
+     * Mark email as verified
+     */
+    public function markEmailAsVerified(): bool
+    {
+        return $this->forceFill([
+            'email_verified_at' => now(),
+            'email_verification_otp' => null,
+            'email_verification_otp_expires_at' => null
+        ])->save();
+    }
+
+    /**
+     * Determine if the user has verified their email address.
+     */
+    public function hasVerifiedEmail(): bool
+    {
+        return !is_null($this->email_verified_at);
     }
 }
