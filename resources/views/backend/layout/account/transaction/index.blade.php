@@ -1,4 +1,5 @@
 @extends('backend.app') {{-- estending the back-end app.blade.php file  --}}
+@section('title', 'Transaction') {{-- setting the title of the page  --}}
 
 @push('style')
     <link rel="stylesheet" href="{{ asset('backend/vendors/datatable/css/datatables.min.css') }}">
