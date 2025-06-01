@@ -1056,9 +1056,17 @@
                     <p>Step 02</p>
                 </div>
             </div>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('create.auction') }}" method="POST" id="sellForm" enctype="multipart/form-data">
                 @csrf
-                @method('POST')
                 <!-- from step  -->
                 <div class="form--step">
                     <!-- your info  -->
@@ -1875,22 +1883,6 @@
 
 @push('script')
     <script>
-        // When files are selected
-        // $('#dash-upload').on('change', function() {
-        //     let filesSelected = $(this)[0].files.length;
-        //     let text = filesSelected + ' file(s) selected';
-        //     $('.dropify-infos-message').text(text); // Change the message next to Dropify input
-
-        //     if (filesSelected < 7) {
-        //         $('#media_notification').text(`You have selected only ${filesSelected} files.`)
-        //             .css('color', 'red');
-        //     } else {
-        //         $('#media_notification').text('You have selected 7 or more files.')
-        //             .css('color', 'green');
-        //     }
-        // });
-        // CK Editor
-        // Initialize CKEditor for equipment textarea
         ClassicEditor
             .create(document.querySelector('#equipment'))
             .then(editor => {
@@ -2038,29 +2030,6 @@
                 // Update the file list display
                 updateFileList();
             });
-
-
-            // function updateFileList() {
-            //     $('#file-list').empty(); // Clear the current list
-
-            //     $.each(allFiles, function(index, file) {
-            //         var reader = new FileReader();
-            //         reader.onload = function(e) {
-            //             $('#file-list').append(
-            //                 '<div class="file-item" style="position: relative;">' +
-            //                 '<img src="' + e.target.result +
-            //                 '" style="width: 100px; height: 100px; object-fit: cover;"/>' +
-            //                 '<span class="remove-file" data-index="' + index +
-            //                 '" style="position: absolute; top: 5px; right: 5px; color: red; cursor: pointer; font-weight: bold;">&times;</span>' +
-            //                 '</div>'
-            //             );
-            //         };
-            //         reader.readAsDataURL(file);
-            //     });
-            // }
-
-
-
             function updateFileList() {
                 $('#file-list').empty(); // Clear the current list
 

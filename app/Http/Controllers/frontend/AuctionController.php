@@ -53,134 +53,126 @@ class AuctionController extends Controller
      */
     public function create(Request $request)
     {
-        // dd($request->all());
 
-        // Assuming authentication and user retrieval
+        // Check if user is authenticated and email is verified
         $user = auth()->user();
-
-        if ($user->email_verified_at     == null) {
-            return redirect()->back()->with('t-error', 'Please vefiry your email address');
-        }
-
-
-        // creating validation rules
-        $rules = [
-            'full_name' => 'required',
-            'phone' => 'required',
-            'vin_number' => 'required',
-            'year' => 'required | numeric',
-            'make' => 'required',
-            'model' => 'required',
-            'transmission' => 'required',
-            'mileage' => 'required',
-            'equipment' => 'required',
-            'modify' => 'required|boolean',
-            'flaw' => 'required|boolean',
-            'modify_text' => $request->modify == true ? 'required' : 'nullable',
-            'flaw_text' => $request->flaw == true ? 'required' : 'nullable',
-            'location' => 'required',
-            'sale_elsewhere' => 'required|boolean',
-            'titled_location' => 'required',
-            'state_id' => 'required',
-            'on_my_name' => 'required|boolean',
-            'title_status' => 'required',
-            'reserve_price' => 'required|boolean',
-            'price_range' => $request->reserve_price == true ? 'required' : 'nullable',
-            'engine' => 'required',
-            'drivetrain' => 'required',
-            'body_style' => 'required',
-            'exterior_color' => 'required',
-            'interior_color' => 'required',
-            'ownership_history' => 'required',
-            'media' => ['required', 'array'],
-            'media.*' => 'file|mimes:jpeg,png,jpg,gif,svg,avi,mpeg,mov,mp4',
-        ];
-        // validating rules
-        $input = Validator::make($request->all(), $rules);
-        // Return validation errors if any
-        if ($input->fails()) {
+        if (!$user || !$user->email_verified_at) {
             return response()->json([
                 'success' => false,
-                'errors' => $input->errors()
-            ]);
+                'message' => 'Please verify your email address'
+            ], 403);
+        }
+
+        // Define validation rules
+        $rules = [
+            'full_name' => 'required|string|max:255',
+            'phone' => 'required|string|max:20',
+            'vin_number' => 'required|string|max:17',
+            'year' => 'required|numeric|min:1900|max:' . date('Y'),
+            'make' => 'required|string|max:100',
+            'model' => 'required|string|max:100',
+            'transmission' => 'required|string|in:Manual Transmission,Automatic Transmission,Continuously Variable Transmission,Dual-Clutch Transmission',
+            'mileage' => 'required|numeric|min:0',
+            'equipment' => 'required|string',
+            'modify' => 'required|boolean',
+            'flaw' => 'required|boolean',
+            'modify_text' => $request->modify ? 'required|string' : 'nullable|string',
+            'flaw_text' => $request->flaw ? 'required|string' : 'nullable|string',
+            'location' => 'required|string|in:Dhaka,Chattogram,Khulna,Rajshahi,Sylhet,Rangpur,Barisal,Mymensingh',
+            'sale_elsewhere' => 'required|boolean',
+            'titled_location' => 'required|string|in:Dhaka,Chattogram,Khulna,Rajshahi,Sylhet,Rangpur,Barisal,Mymensingh',
+            'state_id' => 'required|exists:states,id',
+            'on_my_name' => 'required|boolean',
+            'title_status' => 'required|string|in:Clean,Salvage,Rebuilt,Not actual mileage,Manufacturer buyback',
+            'reserve_price' => 'required|boolean',
+            'price_range' => $request->reserve_price ? 'required|numeric|min:0' : 'nullable|numeric|min:0',
+            'engine' => 'required|string|max:100',
+            'drivetrain' => 'required|string|max:100',
+            'body_style' => 'required|string|max:100',
+            'exterior_color' => 'required|string|max:100',
+            'interior_color' => 'required|string|max:100',
+            'ownership_history' => 'required|string',
+            'media' => 'required|array|max:512000', // 500MB total
+            'media.*' => 'file|mimes:jpeg,png,jpg,gif,svg,avi,mpeg,mov,mp4|max:20480', // 20MB max per file
+        ];
+
+        // Validate request
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors()
+            ], 422);
         }
 
         try {
-            // Start a database transaction
             DB::beginTransaction();
 
-            // Creating new Auction instance
-            $auction = new Auction();
-            $auction->full_name = $request->input('full_name');
-            $auction->phone = $request->input('phone');
-            $auction->vin_number = $request->input('vin_number');
-            $auction->year = $request->input('year');
-            $auction->make = $request->input('make');
-            $auction->model = $request->input('model');
-            $auction->transmission = $request->input('transmission');
-            $auction->mileage = $request->input('mileage');
-            $auction->equipment = $request->input('equipment');
-            $auction->modify = (bool) $request->input('modify');
-            $auction->flaw = (bool) $request->input('flaw');
-            $auction->modify_text = (bool) $request->input('modify') ? $request->input('modify_text') : null;
-            $auction->flaw_text = (bool) $request->input('flaw') ? $request->input('flaw_text') : null;
-            $auction->location = $request->input('location');
-            $auction->sale_elsewhere = (bool) $request->input('sale_elsewhere');
-            $auction->titled_location = $request->input('titled_location');
-            $auction->state_id = $request->input('state_id');
-            $auction->on_my_name = (bool) $request->input('on_my_name');
-            $auction->title_status = $request->input('title_status');
-            $auction->reserve_price = (bool) $request->input('reserve_price');
-            $auction->price_range = (bool) $request->input('reserve_price') ? $request->input('price_range') : null;
-            $auction->engine = $request->input('engine');
-            $auction->drivetrain = $request->input('drivetrain');
-            $auction->body_style = $request->input('body_style');
-            $auction->exterior_color = $request->input('exterior_color');
-            $auction->interior_color = $request->input('interior_color');
-            $auction->ownership_history = $request->input('ownership_history');
+            // Create new Auction instance
+            $auction = new Auction([
+                'full_name' => $request->full_name,
+                'phone' => $request->phone,
+                'vin_number' => $request->vin_number,
+                'year' => $request->year,
+                'make' => $request->make,
+                'model' => $request->model,
+                'transmission' => $request->transmission,
+                'mileage' => $request->mileage,
+                'equipment' => $request->equipment,
+                'modify' => (bool) $request->modify,
+                'flaw' => (bool) $request->flaw,
+                'modify_text' => $request->modify ? $request->modify_text : null,
+                'flaw_text' => $request->flaw ? $request->flaw_text : null,
+                'location' => $request->location,
+                'sale_elsewhere' => (bool) $request->sale_elsewhere,
+                'titled_location' => $request->titled_location,
+                'state_id' => $request->state_id,
+                'on_my_name' => (bool) $request->on_my_name,
+                'title_status' => $request->title_status,
+                'reserve_price' => (bool) $request->reserve_price,
+                'price_range' => $request->reserve_price ? $request->price_range : null,
+                'engine' => $request->engine,
+                'drivetrain' => $request->drivetrain,
+                'body_style' => $request->body_style,
+                'exterior_color' => $request->exterior_color,
+                'interior_color' => $request->interior_color,
+                'ownership_history' => $request->ownership_history,
+            ]);
 
-
-
-            // Save the auction
+            // Associate auction with user and save
             $auction = $user->auctions()->save($auction);
 
-
-            // Handle file uploads
+            // Handle media uploads
             if ($request->hasFile('media')) {
                 foreach ($request->file('media') as $media) {
                     $extension = $media->getClientOriginalExtension();
+                    $path = in_array($extension, ['jpeg', 'png', 'jpg', 'gif', 'svg'])
+                        ? 'images/auctions'
+                        : 'videos/auctions';
 
-                    if (in_array($extension, ['jpeg', 'png', 'jpg', 'gif', 'svg'])) {
-                        $url = uploadImage($media, 'images/auctions'); // Adjust the storage path as needed
-                        // Save to auction_image_galleries table
-                        $auctionImage = new AuctionImageGallery(['url' => $url]);
-                        $auction->auctionImageGallery()->save($auctionImage);
-                    } elseif (in_array($extension, ['avi', 'mpeg', 'mov', 'mp4'])) {
-                        $url = uploadImage($media, 'videos/auctions'); // Adjust the storage path as needed
-                        // Save to auction_image_galleries table
-                        $auctionImage = new AuctionVideoGallery(['url' => $url]);
-                        $auction->auctionImageGallery()->save($auctionImage);
-                    }
+                    // Custom upload function (assumed to be defined elsewhere)
+                    $url = uploadImage($media, $path);
+
+                    // Save to appropriate gallery
+                    $galleryModel = in_array($extension, ['jpeg', 'png', 'jpg', 'gif', 'svg'])
+                        ? AuctionImageGallery::class
+                        : AuctionVideoGallery::class;
+
+                    $auction->auctionImageGallery()->save(new $galleryModel(['url' => $url]));
                 }
             }
 
-            // Commit the transaction
             DB::commit();
 
-            // Set flash message for the next request
-            session()->flash('t-success', 'Successfully Uploaded');
-
             return response()->json([
-                'success' => true,
-                'message' => 'Successfully uploaded'
+                't-success' => true,
+                'message' => 'Auction created successfully'
             ], 200);
         } catch (Exception $e) {
-            // Rollback the transaction on exception
             DB::rollback();
             return response()->json([
-                'success' => false,
-                'message' => 'Something went wrong..!',
-                'error' => $e->getMessage()
+                't-error' => false,
+                'message' => 'Failed to create auction: ' . $e->getMessage()
             ], 500);
         }
     }
