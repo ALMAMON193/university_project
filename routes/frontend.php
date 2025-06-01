@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\BidController;
 use App\Http\Controllers\frontend\UserController;
 use App\Http\Controllers\frontend\AuctionController;
+use App\Http\Controllers\frontend\ChatbotController;
 use App\Http\Controllers\frontend\HomepageController;
 use App\Http\Controllers\frontend\WishlistController;
 use App\Http\Controllers\frontend\AboutPageController;
@@ -148,3 +149,7 @@ Route::prefix('bidder-profile')->controller(BidderProfileController::class)->gro
     Route::get('bidder/{id}/{slug}', 'index')->name('bidder.profile');
     Route::get('bidder/{id}/{slug}/comments', 'indexWithAllComments')->name('bidder.profile.all');
 });
+
+
+Route::get('/chat-gpt', [ChatbotController::class, 'ChatGpt'])->name('chat-gpt.view');
+Route::post('/chat-gpt', [ChatbotController::class, 'ChatGptPost'])->name('chat-gpt.post');
