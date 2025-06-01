@@ -1811,9 +1811,11 @@
                         <!-- info box  -->
                         <div class="info--box">
                             <h5 class="mt_25">
-                                Please upload at last 6 or maximum 12 photos and at last 1 or maximum 2 videos of the
+                                Please upload UpTo 70-100 MB.
+                                And at last 6 or maximum 12 photos and at last 1 or maximum 2 videos of the
                                 Exterior and Interior of
-                                the car. (Minimum 7 files)
+                                the car.(Minimum 7 files)
+                                
                             </h5>
                             <h5 class="mt_25" id="media_notification">&nbsp;</h5>
                             <!-- upload box  -->

@@ -82,9 +82,9 @@
                             <div>
                                 <h4>
                                     @if ($data[5]->title)
-                                        {!! $data[5]->title !!}
+                                        <!-- {!! $data[5]->title !!} -->
                                     @else
-                                        Saudi Cars Hubs
+                                        Smart Car Auction
                                     @endif
                                 </h4>
                                 @if ($data[5]->description)
@@ -92,7 +92,7 @@
                                 @else
                                     <p>
                                         Car reviewer Doug DeMuro brings a huge audience to
-                                        <strong>Saudi Cars Hubs</strong> — along with his
+                                        <strong>Smart Car Auction</strong> — along with his
                                         commentary.
                                     </p>
                                 @endif
@@ -414,7 +414,7 @@
                                                         short video tutorial:
                                                     </p>
                                                     <!-- video popup -->
-                                                    <div class="video--popup"
+                                                    <!-- <div class="video--popup"
                                                         style="background-image: url({{ asset('frontend/images/play-banner.png') }});">
                                                         >
 
@@ -428,7 +428,7 @@
                                                                     fill="#FAF9F6" />
                                                             </svg>
                                                         </a>
-                                                    </div>
+                                                    </div> -->
                                                     <ul>
                                                         <li>
                                                             When you bid, we place a hold on your credit card

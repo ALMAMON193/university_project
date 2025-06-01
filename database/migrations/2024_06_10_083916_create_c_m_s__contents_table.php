@@ -29,7 +29,7 @@ return new class extends Migration {
             ['title' => 'facebook', 'created_at' => now(), 'updated_at' => now()],
             ['title' => 'instagram', 'created_at' => now(), 'updated_at' => now()],
             ['title' => 'git', 'created_at' => now(), 'updated_at' => now()],
-            ['title' => 'Saudi Cars Hubs', 'created_at' => now(), 'updated_at' => now()],
+            ['title' => 'Smart Car Auction', 'created_at' => now(), 'updated_at' => now()],
             ['title' => 'Heavyxxx@Gmail.Com', 'created_at' => now(), 'updated_at' => now()]
         ]);
     }

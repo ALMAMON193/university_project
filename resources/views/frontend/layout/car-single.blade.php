@@ -300,7 +300,7 @@
                                 <div class="profile">
                                     <img src="{{ $cms[6]->image_url ?? asset('frontend/images/about.png') }}"
                                         alt="" />
-                                    <p>{{ $cms[6]->title ?? 'Saudi Cars Hubs' }}</p>
+                                    <p>{{ $cms[6]->title ?? 'Smart Car Auction' }}</p>
                                 </div>
                                 @if ($cms[6]->sub_title)
                                     {!! $cms[6]->sub_title !!}
