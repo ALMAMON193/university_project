@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UsersTableSeeder extends Seeder
 {
@@ -18,9 +18,9 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'full_name' => 'Admin User',
-                'email' => 'admin@email.com',
+                'email' => 'admin@gmail.com',
                 'email_verified_at' => now(),
-                'password' => Hash::make('12345@Aa'),
+                'password' => Hash::make('123456Aa'),
                 'role' => 'admin',
                 'status' => 'active',
                 'remember_token' => Str::random(10),
@@ -28,9 +28,9 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'full_name' => 'Jane Smith',
-                'email' => 'user@email.com',
+                'email' => 'user@gmail.com',
                 'email_verified_at' => now(),
-                'password' => Hash::make('12345@Aa'),
+                'password' => Hash::make('123456Aa'),
                 'role' => 'user',
                 'status' => 'active',
                 'remember_token' => Str::random(10),
@@ -44,7 +44,7 @@ class UsersTableSeeder extends Seeder
         // Insert user profiles
         DB::table('user_profiles')->insert([
             [
-                'user_id' => $users['admin@email.com'],
+                'user_id' => $users['admin@gmail.com'],
                 'avatar' => 'images/avatars/admin.jpg',
                 'phone' => '1234567890',
                 'address' => '123 Admin Street',
@@ -55,7 +55,7 @@ class UsersTableSeeder extends Seeder
                 'created_at' => now(),
             ],
             [
-                'user_id' => $users['user@email.com'],
+                'user_id' => $users['user@gmail.com'],
                 'avatar' => 'images/avatars/user.jpg',
                 'phone' => '0987654321',
                 'address' => '456 User Road',
@@ -69,12 +69,12 @@ class UsersTableSeeder extends Seeder
         // balance
         DB::table('user_balances')->insert([
             [
-                'user_id' => $users['admin@email.com'],
+                'user_id' => $users['admin@gmail.com'],
                 'balance' => 0,
                 'created_at' => now(),
             ],
             [
-                'user_id' => $users['user@email.com'],
+                'user_id' => $users['user@gmail.com'],
                 'balance' => 0,
                 'created_at' => now(),
             ],

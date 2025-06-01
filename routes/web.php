@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 require __DIR__.'/auth.php';
 
 
-Route::get('/test-broadcast', function () {
-    event(new \App\Events\CarBiddingPriceEvent(2,101));
-    return 'Event broadcasted';
-});
+// routes/web.php
+Route::get('/verify-otp', [RegisteredUserController::class, 'showOtpForm'])
+    ->name('verification.otp');
+
+Route::post('/verify-otp', [RegisteredUserController::class, 'verifyOtp'])
+    ->name('email-otp-verification');
+
+Route::post('/resend-otp', [RegisteredUserController::class, 'resendOtp'])
+    ->name('verification.resend-otp');

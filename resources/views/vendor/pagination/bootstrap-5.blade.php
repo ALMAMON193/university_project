@@ -11,8 +11,8 @@
     }
     .active>.page-link, .page-link.active {
         color: white !important;
-        background-color: #fd7f54 !important;
-        border-color: #fd7f54 !important;
+        background-color: #5459AC !important;
+        border-color: #5459AC !important;
     }
 </style>
     <nav class="d-flex justify-items-center justify-content-between" >

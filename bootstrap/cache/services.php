@@ -33,21 +33,22 @@
     29 => 'Carbon\\Laravel\\ServiceProvider',
     30 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     31 => 'Termwind\\Laravel\\TermwindServiceProvider',
-    32 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    33 => 'Spatie\\Permission\\PermissionServiceProvider',
-    34 => 'Usamamuneerchaudhary\\Commentify\\Providers\\MarkdownServiceProvider',
-    35 => 'Yajra\\DataTables\\ButtonsServiceProvider',
-    36 => 'Yajra\\DataTables\\EditorServiceProvider',
-    37 => 'Yajra\\DataTables\\FractalServiceProvider',
-    38 => 'Yajra\\DataTables\\HtmlServiceProvider',
-    39 => 'Yajra\\DataTables\\DataTablesServiceProvider',
-    40 => 'App\\Providers\\AppServiceProvider',
-    41 => 'App\\Providers\\AuthServiceProvider',
-    42 => 'App\\Providers\\EventServiceProvider',
-    43 => 'App\\Providers\\RouteServiceProvider',
-    44 => 'Usamamuneerchaudhary\\Commentify\\Providers\\CommentifyServiceProvider',
-    45 => 'Spatie\\Permission\\PermissionServiceProvider',
-    46 => 'App\\Providers\\BroadcastServiceProvider',
+    32 => 'OpenAI\\Laravel\\ServiceProvider',
+    33 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    34 => 'Spatie\\Permission\\PermissionServiceProvider',
+    35 => 'Usamamuneerchaudhary\\Commentify\\Providers\\MarkdownServiceProvider',
+    36 => 'Yajra\\DataTables\\ButtonsServiceProvider',
+    37 => 'Yajra\\DataTables\\EditorServiceProvider',
+    38 => 'Yajra\\DataTables\\FractalServiceProvider',
+    39 => 'Yajra\\DataTables\\HtmlServiceProvider',
+    40 => 'Yajra\\DataTables\\DataTablesServiceProvider',
+    41 => 'App\\Providers\\AppServiceProvider',
+    42 => 'App\\Providers\\AuthServiceProvider',
+    43 => 'App\\Providers\\EventServiceProvider',
+    44 => 'App\\Providers\\RouteServiceProvider',
+    45 => 'Usamamuneerchaudhary\\Commentify\\Providers\\CommentifyServiceProvider',
+    46 => 'Spatie\\Permission\\PermissionServiceProvider',
+    47 => 'App\\Providers\\BroadcastServiceProvider',
   ),
   'eager' => 
   array (
@@ -229,6 +230,9 @@
     'Laravel\\Sail\\Console\\PublishCommand' => 'Laravel\\Sail\\SailServiceProvider',
     'Laravel\\Socialite\\Contracts\\Factory' => 'Laravel\\Socialite\\SocialiteServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
+    'OpenAI\\Client' => 'OpenAI\\Laravel\\ServiceProvider',
+    'OpenAI\\Contracts\\ClientContract' => 'OpenAI\\Laravel\\ServiceProvider',
+    'openai' => 'OpenAI\\Laravel\\ServiceProvider',
   ),
   'when' => 
   array (
@@ -278,6 +282,9 @@
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
+    array (
+    ),
+    'OpenAI\\Laravel\\ServiceProvider' => 
     array (
     ),
   ),

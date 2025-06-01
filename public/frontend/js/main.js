@@ -59,7 +59,7 @@
       touchDrag: false,
       mouseDrag: false,
       navText: [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none"><path d="M11.0312 7.4563L4.03354 14.454L11.0312 21.4517" stroke="#FD7F54" stroke-width="2.30567" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.6328 14.4541H4.2306" stroke="#FD7F54" stroke-width="2.30567" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none"><path d="M11.0312 7.4563L4.03354 14.454L11.0312 21.4517" stroke="#5459AC" stroke-width="2.30567" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.6328 14.4541H4.2306" stroke="#5459AC" stroke-width="2.30567" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>',
         '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none"><path d="M16.6367 7.4563L23.6344 14.454L16.6367 21.4517" stroke="#FAF9F6" stroke-width="2.30567" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.03516 14.4541H23.4374" stroke="#FAF9F6" stroke-width="2.30567" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       ],
       animateIn: "fadeIn",

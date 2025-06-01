@@ -1,17 +1,18 @@
 <?php
 
-use App\Http\Controllers\frontend\AboutPageController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\frontend\BidController;
+use App\Http\Controllers\frontend\UserController;
 use App\Http\Controllers\frontend\AuctionController;
+use App\Http\Controllers\frontend\ChatbotController;
+use App\Http\Controllers\frontend\HomepageController;
+use App\Http\Controllers\frontend\WishlistController;
+use App\Http\Controllers\frontend\AboutPageController;
 use App\Http\Controllers\frontend\BankAccountController;
 use App\Http\Controllers\frontend\DynamicPageController;
-use App\Http\Controllers\frontend\HomepageController;
 use App\Http\Controllers\frontend\SellCarPageController;
-use App\Http\Controllers\frontend\UserController;
-use App\Http\Controllers\frontend\BidController;
 use App\Http\Controllers\frontend\BidderProfileController;
-use App\Http\Controllers\frontend\WishlistController;
 use App\Http\Controllers\PaymentController\StripeController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 /**
  * This route group contains all routes for the HomepageController
  */
-Route::controller(HomepageController::class)->group(function() {
+Route::controller(HomepageController::class)->group(function () {
     // return the view of the index page
     Route::get('/', 'index')->name('home-page');
     Route::get('/filter', 'filter')->name('filter');
@@ -39,14 +40,14 @@ Route::controller(HomepageController::class)->group(function() {
  */
 Route::controller(UserController::class)->middleware('auth')->group(function () {
     // return the view of the prifile view
-    Route::get('my-profile', 'index')->name('user.profile');
+    Route::get('my-profile', 'index')->name('user.profile')->middleware(['auth', 'otp_verified']);
 });
 
 
 /**
  * This route group contains all the routes under the UserController
  */
-Route::controller(UserController::class)->middleware('auth')->group(function () {
+Route::controller(UserController::class)->middleware(['auth', 'otp_verified'])->group(function () {
     // update image
     Route::post('/avater', 'updateImage')->name('image.update');
     // updat the public info form
@@ -63,7 +64,7 @@ Route::controller(UserController::class)->middleware('auth')->group(function () 
 /**
  * This route group contains all routes for the page AboutPageController
  */
-Route::controller(AboutPageController::class)->group(function() {
+Route::controller(AboutPageController::class)->group(function () {
     // return the view of cars-and-bits.blade.php
     Route::get('/cars-and-bits', 'index')->name('cars.bid.page');
 });
@@ -71,16 +72,16 @@ Route::controller(AboutPageController::class)->group(function() {
 /**
  * This route group contains all routes for the SellCarPageController
  */
-Route::controller(SellCarPageController::class)->group(function() {
+Route::controller(SellCarPageController::class)->group(function () {
     // return the view of sell-car.blade.php
     Route::get('/sell-car', 'index')->name('sell.car.page');
-});
+})->middleware(['auth', 'otp_verified']);
 
 /**
  * this route group contains all the routes for the AuctionController
  */
 
-Route::controller(AuctionController::class)->group(function() {
+Route::controller(AuctionController::class)->group(function () {
     // return auction page
     Route::get('/auctions/{year}/{model}/{make}', 'index')->name('auction.page');
     // all atucitons
@@ -96,7 +97,7 @@ Route::controller(AuctionController::class)->group(function() {
  * this route group contains all the routes for the AuctionController
  */
 
- Route::controller(AuctionController::class)->middleware('auth')->group(function() {
+Route::controller(AuctionController::class)->middleware('auth')->group(function () {
     // creating an auction
     Route::post('/auction', 'create')->name('create.auction');
     // updating an auction
@@ -109,15 +110,15 @@ Route::controller(AuctionController::class)->group(function() {
 /**
  * This route group contains all the routes of the BidController
  */
-Route::controller(BidController::class)->middleware('auth')->group(function() {
+Route::controller(BidController::class)->middleware('auth')->group(function () {
     // posting a bid under a user
     Route::post('/bid', 'create')->name('bid.create');
-});
+})->middleware(['auth', 'otp_verified']);
 
 /**
  * This route group contains all the routes of the DynamicPageController
  */
-Route::controller(DynamicPageController::class)->group(function() {
+Route::controller(DynamicPageController::class)->group(function () {
     // return the view of sell-car.blade.php
     Route::get('/page/{page_slug}', 'index')->name('custom.page');
 });
@@ -127,24 +128,28 @@ Route::controller(DynamicPageController::class)->group(function() {
  * Strype controller
  */
 
- Route::controller(StripeController::class)->middleware('auth')->group(function (){
+Route::controller(StripeController::class)->middleware('auth')->group(function () {
     Route::post('/recharge', 'recharge')->name('strype.payment');
     Route::get('/recharge/success', 'success')->name('strype.success');
     Route::put('/recharge/initiate-Transfer', 'initiateTransfer')->name('strype.initiate.transfer');
     Route::get('test/bank-account', 'generateBankAccountToken')->name('strype.test.bank');
- });
+});
 
 Route::controller(BankAccountController::class)->middleware('auth')->group(function () {
     Route::post('/withdraw', 'create')->name('withdraw.create');
 });
 
-Route::controller(WishlistController::class)->middleware('auth')->group(function() {
+Route::controller(WishlistController::class)->middleware('auth')->group(function () {
     // this basically add wishlist of a user
     Route::post('/wishlist/add', 'index')->name('wishlist.add');
 });
 
-Route::prefix('bidder-profile')->controller(BidderProfileController::class)->group(function() {
+Route::prefix('bidder-profile')->controller(BidderProfileController::class)->group(function () {
     // user profile for all user
     Route::get('bidder/{id}/{slug}', 'index')->name('bidder.profile');
     Route::get('bidder/{id}/{slug}/comments', 'indexWithAllComments')->name('bidder.profile.all');
 });
+
+
+Route::get('/chat-gpt', [ChatbotController::class, 'ChatGpt'])->name('chat-gpt.view');
+Route::post('/chat-gpt', [ChatbotController::class, 'ChatGptPost'])->name('chat-gpt.post');

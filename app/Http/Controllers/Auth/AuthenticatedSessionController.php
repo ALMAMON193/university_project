@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
+use App\Http\Requests\Auth\LoginRequest;
+use App\Notifications\EmailVerificationOtpNotification;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -27,15 +28,24 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
         $request->session()->regenerate();
 
-        // Check if the email is verified
+        // Store the user before logging out
         $user = Auth::user();
 
-        // Check the role of the authenticated user
+        // Check if the email is verified
+        if (!$user->hasVerifiedEmail()) {
+            Auth::logout();
+
+            $otp = $user->generateNewOtp();
+            // Send OTP email
+            $user->notify(new EmailVerificationOtpNotification($otp));
+            return redirect()->route('verification.otp')
+            ->with('email', $user->email)
+            ->with('t-success', 'Please verify your email before logging in.');
+        }
         if ($user->role == 'admin') {
             return redirect()->route('admin.dashboard')->with('t-success', 'Admin Login Successfully');
-        } else {
-            return redirect()->route('home-page')->with('t-success', 'Login Successfully');
         }
+        return redirect()->route('home-page')->with('t-success', 'Login Successfully');
     }
 
     /**

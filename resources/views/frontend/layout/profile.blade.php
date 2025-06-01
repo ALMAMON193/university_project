@@ -186,13 +186,13 @@
 
                                                             @if ($auction->status === 'close')
                                                                 @if (count($auction->winner()))
-                                                                    <a style="color: #fd7f54; font-weight: bold;"
+                                                                    <a style="color: #5459AC; font-weight: bold;"
                                                                         href="{{ route('bidder.profile', ['id' =>$auction->winner()[0]->user, 'slug' => Str::slug($auction->winner()[0]->user->full_name ?? '')]) }}">
                                                                         The winner is
                                                                         {{ $auction->winner()[0]->user->full_name }}
                                                                     </a>
                                                                 @else
-                                                                    <p style="color: #fd7f54">No Winner</p>
+                                                                    <p style="color: #5459AC">No Winner</p>
                                                                 @endif
                                                             @else
                                                                 <div class="card--footer">
@@ -233,7 +233,7 @@
                                                     </div>
                                                     <div class="car--info">
                                                         @if ($auction->maxBid() == $bid->bid && $auction->end < now())
-                                                            <div class="bid--info" style="background-color: #fd7f54;">
+                                                            <div class="bid--info" style="background-color: #5459AC;">
                                                                 <p style=" color:white;">Bid {{ $bid->bid }}</p>
                                                                 <p style=" color:white;">Winner</p>
                                                             </div>

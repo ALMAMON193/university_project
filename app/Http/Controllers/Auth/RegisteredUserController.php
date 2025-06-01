@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Auth\Events\Registered;
+use App\Notifications\EmailVerificationOtpNotification;
 
 class RegisteredUserController extends Controller
 {
@@ -48,22 +49,68 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // Send email verification notification
-        $user->sendEmailVerificationNotification();
-
         // Create a profile with null values
         $user->profile()->create([]);
         // Create a card with null values
         $user->card()->create([]);
         // create one balance log
         $user->balance()->create([]);
+        $otp = $user->generateNewOtp();
+        // Send OTP email (you'll need to create this notification)
+        $user->notify(new EmailVerificationOtpNotification($otp));
 
-        event(new Registered($user));
+        return redirect()->route('verification.otp')
+            ->with('email', $user->email)
+            ->with('t-success', 'Registration successful. Please check your email for the OTP.');
+    }
+    public function showOtpForm(): View|RedirectResponse
+    {
+
+        return view('auth.verify-otp', [
+            'email' => session('email'),
+            'success' => session('t-success')
+        ]);
+    }
+
+    public function verifyOtp(Request $request)
+    {
+        // dd($request->all());
+        $request->validate([
+            'otp' => 'required|string|digits:6',
+            'email' => 'required|email|exists:users,email'
+        ]);
+
+        $user = User::where('email', $request->email)
+            ->where('email_verification_otp', $request->otp)
+            ->where('email_verification_otp_expires_at', '>', now())
+            ->first();
+
+        if (!$user || !is_string($user->email_verification_otp)) {
+            return back()->with('error', 'Invalid or expired OTP')->withInput();
+        }
+
+        $user->markEmailAsVerified();
 
         Auth::login($user);
 
-        // return redirect(RouteServiceProvider::HOME);
-        return redirect()->route('home-page')->with('t-success', 'Account Created, Please check your email to verify your account.');
+        return redirect()->route('home-page')->with('success', 'Verified successfully!');
+    }
 
+    /**
+     * Resend the OTP.
+     */
+    public function resendOtp(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users,email'
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+        $otp = $user->generateNewOtp();
+        $user->notify(new EmailVerificationOtpNotification($otp));
+
+        return redirect()->route('verification.otp')
+            ->with('t-success', 'A new OTP has been sent to your email.')
+            ->with('email', $request->email);
     }
 }

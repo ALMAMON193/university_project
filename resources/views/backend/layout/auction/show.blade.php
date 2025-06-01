@@ -293,11 +293,11 @@
                                     fill="none">
                                     <path
                                         d="M23.8346 13.0001C23.8346 18.9801 18.9813 23.8334 13.0013 23.8334C7.0213 23.8334 2.16797 18.9801 2.16797 13.0001C2.16797 7.02008 7.0213 2.16675 13.0013 2.16675C18.9813 2.16675 23.8346 7.02008 23.8346 13.0001Z"
-                                        stroke="#FD7F54" stroke-width="1.5" stroke-linecap="round"
+                                        stroke="#5459AC" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                     <path
                                         d="M17.0177 16.4449L13.6593 14.4407C13.0743 14.0941 12.5977 13.2599 12.5977 12.5774V8.13574"
-                                        stroke="#FD7F54" stroke-width="1.5" stroke-linecap="round"
+                                        stroke="#5459AC" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
@@ -308,15 +308,15 @@
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
                                     fill="none">
-                                    <path d="M9.76255 22.2083L4.32422 16.7808" stroke="#FD7F54" stroke-opacity="0.47"
+                                    <path d="M9.76255 22.2083L4.32422 16.7808" stroke="#5459AC" stroke-opacity="0.47"
                                         stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <path d="M9.76172 3.79175V22.2084" stroke="#FD7F54" stroke-opacity="0.47"
+                                    <path d="M9.76172 3.79175V22.2084" stroke="#5459AC" stroke-opacity="0.47"
                                         stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <path d="M16.2383 3.79175L21.6766 9.21925" stroke="#FD7F54" stroke-width="1.5"
+                                    <path d="M16.2383 3.79175L21.6766 9.21925" stroke="#5459AC" stroke-width="1.5"
                                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M16.2383 22.2084V3.79175" stroke="#FD7F54" stroke-width="1.5"
+                                    <path d="M16.2383 22.2084V3.79175" stroke="#5459AC" stroke-width="1.5"
                                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
@@ -327,17 +327,17 @@
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
                                     fill="none">
-                                    <path d="M18.5785 14.9717L15.2852 18.265" stroke="#FD7F54" stroke-width="1.5"
+                                    <path d="M18.5785 14.9717L15.2852 18.265" stroke="#5459AC" stroke-width="1.5"
                                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M7.42188 14.9717H18.5802" stroke="#FD7F54" stroke-width="1.5"
+                                    <path d="M7.42188 14.9717H18.5802" stroke="#5459AC" stroke-width="1.5"
                                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M7.42188 11.0284L10.7152 7.73511" stroke="#FD7F54" stroke-width="1.5"
+                                    <path d="M7.42188 11.0284L10.7152 7.73511" stroke="#5459AC" stroke-width="1.5"
                                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M18.5802 11.0283H7.42188" stroke="#FD7F54" stroke-width="1.5"
+                                    <path d="M18.5802 11.0283H7.42188" stroke="#5459AC" stroke-width="1.5"
                                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                     <path
                                         d="M13.0013 23.8334C18.9844 23.8334 23.8346 18.9832 23.8346 13.0001C23.8346 7.017 18.9844 2.16675 13.0013 2.16675C7.01822 2.16675 2.16797 7.017 2.16797 13.0001C2.16797 18.9832 7.01822 23.8334 13.0013 23.8334Z"
-                                        stroke="#FD7F54" stroke-width="1.5" stroke-linecap="round"
+                                        stroke="#5459AC" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
@@ -350,13 +350,13 @@
                                     viewBox="0 0 26 26" fill="none">
                                     <path
                                         d="M18.418 9.75008C18.418 13.9426 14.778 17.3334 10.293 17.3334L9.28548 18.5467L8.68964 19.2618C8.18047 19.8684 7.20546 19.7384 6.86963 19.0126L5.41797 15.8167C3.4463 14.4301 2.16797 12.2309 2.16797 9.75008C2.16797 5.55758 5.80797 2.16675 10.293 2.16675C13.5646 2.16675 16.3921 3.97592 17.6596 6.57592C18.1471 7.54009 18.418 8.61258 18.418 9.75008Z"
-                                        stroke="#FD7F54" stroke-width="1.5" stroke-linecap="round"
+                                        stroke="#5459AC" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                     <path
                                         d="M23.8343 13.9317C23.8343 16.4126 22.556 18.6118 20.5843 19.9984L19.1327 23.1942C18.7968 23.9201 17.8218 24.0609 17.3126 23.4434L15.7093 21.5151C13.0876 21.5151 10.7477 20.3559 9.28516 18.5467L10.2926 17.3334C14.7776 17.3334 18.4176 13.9426 18.4176 9.75009C18.4176 8.61259 18.1468 7.54009 17.6593 6.57593C21.2018 7.38843 23.8343 10.3784 23.8343 13.9317Z"
-                                        stroke="#FD7F54" stroke-width="1.5" stroke-linecap="round"
+                                        stroke="#5459AC" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <path d="M7.58203 9.75H12.9987" stroke="#FD7F54" stroke-width="1.5"
+                                    <path d="M7.58203 9.75H12.9987" stroke="#5459AC" stroke-width="1.5"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>

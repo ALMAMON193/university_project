@@ -55,7 +55,7 @@
                                             value="{{ $item->model }}">{{ $item->model }}</option>
                                     @endforeach
                                 </select>
-                                <button class="btn" style="background: #fd7f54; color:white;">Filter</button>
+                                <button class="btn" style="background: #5459AC; color:white;">Filter</button>
                             </form>
                         </div>
                     </div>

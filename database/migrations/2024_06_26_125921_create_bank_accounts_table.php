@@ -15,14 +15,12 @@ return new class extends Migration {
 
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-
             $table->enum('status', ['pending', 'success'])->default('pending');
-
             $table->string('account_number');
             $table->string('routing_number');
             $table->string('account_name');
             $table->string('bank_name');
-            $table->string('branch_name'); 
+            $table->string('branch_name');
             $table->string('city');
             $table->string('state')->nullable();
             $table->string('country');

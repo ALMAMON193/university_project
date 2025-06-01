@@ -22,21 +22,7 @@ class MediaCount implements ValidationRule
         foreach ($value as $file) {
             // Get the file extension
             $extension = strtolower($file->getClientOriginalExtension());
-
-            // Check if the extension is one of the valid image extensions
-            if (in_array($extension, $this->validImageExtensions)) {
-                $images++; // Increment image counter
-            }
-            // Check if the extension is one of the valid video extensions
-            elseif (in_array($extension, $this->validVideoExtensions)) {
-                $videos++; // Increment video counter
-            }
         }
 
-        // Ensure the number of images is between 6 and 12, and videos between 1 and 3
-        if ($images < 6 || $images > 12 || $videos < 1 || $videos > 2) {
-            $fail('You must upload between 6 and 12 images, and between 1 and 2 videos.');
-        }
-
-    }
+     }
 }

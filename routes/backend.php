@@ -14,7 +14,7 @@ use App\Http\Controllers\backend\setting\MailController;
 use App\Http\Controllers\backend\setting\SocialLightController;
 use App\Http\Controllers\backend\setting\StripeController;
 use App\Http\Controllers\backend\setting\SystemController;
-use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\backend\UserController;
 use App\Http\Controllers\backend\UserListController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +31,6 @@ use Illuminate\Support\Facades\Route;
 
 //!Route for DashboardController
 Route::get('/dasboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-
 
 // routes for sell car page contents
 Route::prefix('sell-car-page')->controller(SellCarPageController::class)->group(function () {

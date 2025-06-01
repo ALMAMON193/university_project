@@ -194,7 +194,7 @@
                                     <option value="40000-50000">$40,000 - $50,000</option>
                                     <option value="50000-more">Above $50,000</option>
                                 </select> --}}
-                                <button class="btn" style="background: #fd7f54; color:white;">Filter</button>
+                                <button class="btn" style="background: #5459AC; color:white;">Filter</button>
                             </form>
                         </div>
                     </div>
