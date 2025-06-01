@@ -108,7 +108,7 @@ class StripeController extends Controller
         }
     }
 
-    
+
     // generate test bank account token
     public function generateBankAccountToken()
     {
@@ -153,7 +153,7 @@ class StripeController extends Controller
             return redirect()->away($transfer->destination_payment_url);
         } catch (Exception $e) {
             // Handle transfer failure
-            dd($e);
+            // dd($e);
             return back()->withError('Transfer could not be initiated: ' . $e->getMessage());
         }
     }

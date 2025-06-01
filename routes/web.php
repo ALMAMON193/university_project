@@ -16,7 +16,6 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 */
 require __DIR__.'/auth.php';
 
-
 // routes/web.php
 Route::get('/verify-otp', [RegisteredUserController::class, 'showOtpForm'])
     ->name('verification.otp');

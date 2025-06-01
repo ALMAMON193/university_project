@@ -71,7 +71,6 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-
             // Open chat modal & reset chat
             $('#openChatModal').on('click', function() {
                 $('#chatDisplay').html(''); // Clear previous messages
@@ -144,7 +143,6 @@
             }
         });
     </script>
-
     <!-- Footer Scripts -->
     @include('frontend.partials.script')
 </body>

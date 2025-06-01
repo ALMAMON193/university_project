@@ -1819,9 +1819,8 @@
                         <!-- info box  -->
                         <div class="info--box">
                             <h5 class="mt_25">
-                                Please upload at last 6 or maximum 12 photos and at last 1 or maximum 2 videos of the
-                                Exterior and Interior of
-                                the car. (Minimum 7 files)
+                                 Total file upload size should be less than 500 MB and each file
+                                should be less than 20 MB.
                             </h5>
                             <h5 class="mt_25" id="media_notification">&nbsp;</h5>
                             <!-- upload box  -->
