@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\frontend;
 
-use App\Http\Controllers\Controller;
-use App\Models\Auction;
-use App\Models\AuctionImageGallery;
-use App\Models\AuctionVideoGallery;
-use App\Models\CMS_Content;
-use App\Rules\MediaCount;
-use App\Rules\MediaSize;
 use Exception;
+use App\Models\Auction;
+use App\Rules\MediaSize;
+use App\Rules\MediaCount;
+use App\Models\CMS_Content;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\AuctionImageGallery;
+use App\Models\AuctionVideoGallery;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class AuctionController extends Controller
@@ -53,6 +53,7 @@ class AuctionController extends Controller
      */
     public function create(Request $request)
     {
+        // dd($request->all());
 
         // Assuming authentication and user retrieval
         $user = auth()->user();
@@ -91,7 +92,7 @@ class AuctionController extends Controller
             'exterior_color' => 'required',
             'interior_color' => 'required',
             'ownership_history' => 'required',
-            'media' => ['required', 'array', new MediaCount, new MediaSize],
+            'media' => ['required', 'array'],
             'media.*' => 'file|mimes:jpeg,png,jpg,gif,svg,avi,mpeg,mov,mp4',
         ];
         // validating rules
