@@ -161,14 +161,14 @@ class AuctionController extends Controller
 
             DB::commit();
             return response()->json([
-                't-success' => true,
+                'success' => true,
                 'message' => 'Auction created successfully'
             ], 200);
         } catch (Exception $e) {
             DB::rollback();
             Log::error('Auction creation failed', ['error' => $e->getMessage(), 'trace' => $e->getTraceAsString()]);
             return response()->json([
-                't-error' => true,
+                'success' => false,
                 'message' => 'Failed to create auction: ' . $e->getMessage()
             ], 500);
         }
