@@ -1078,7 +1078,7 @@
                                     <!-- input group  -->
                                     <div class="input--group">
                                         <label for="fname">Full Name<samp>*</samp></label>
-                                        <input id="fname" type="text" name="full_name"
+                                        <input id="full_name" type="text" name="full_name"
                                             placeholder="Enter your card name" required value="{{ old('full_name') }}" />
                                         <!-- invalid message  -->
                                         <p id="errorFullName" class="error"></p>

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\AuctionImageGallery;
 use App\Models\AuctionVideoGallery;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
@@ -51,39 +52,39 @@ class AuctionController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+      public function create(Request $request)
     {
+        Log::info('Auction creation attempt', ['user_id' => auth()->id(), 'input' => $request->all()]);
 
-        // Check if user is authenticated and email is verified
         $user = auth()->user();
         if (!$user || !$user->email_verified_at) {
+            Log::warning('Unauthorized auction creation attempt', ['user_id' => auth()->id()]);
             return response()->json([
                 'success' => false,
                 'message' => 'Please verify your email address'
             ], 403);
         }
 
-        // Define validation rules
         $rules = [
-            'full_name' => 'required|string|max:255',
+           'full_name' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
             'vin_number' => 'required|string|max:17',
             'year' => 'required|numeric|min:1900|max:' . date('Y'),
             'make' => 'required|string|max:100',
             'model' => 'required|string|max:100',
-            'transmission' => 'required|string|in:Manual Transmission,Automatic Transmission,Continuously Variable Transmission,Dual-Clutch Transmission',
+            'transmission' => 'required|string',
             'mileage' => 'required|numeric|min:0',
             'equipment' => 'required|string',
             'modify' => 'required|boolean',
             'flaw' => 'required|boolean',
             'modify_text' => $request->modify ? 'required|string' : 'nullable|string',
             'flaw_text' => $request->flaw ? 'required|string' : 'nullable|string',
-            'location' => 'required|string|in:Dhaka,Chattogram,Khulna,Rajshahi,Sylhet,Rangpur,Barisal,Mymensingh',
+            'location' => 'required|string',
             'sale_elsewhere' => 'required|boolean',
-            'titled_location' => 'required|string|in:Dhaka,Chattogram,Khulna,Rajshahi,Sylhet,Rangpur,Barisal,Mymensingh',
+            'titled_location' => 'required|string',
             'state_id' => 'required|exists:states,id',
             'on_my_name' => 'required|boolean',
-            'title_status' => 'required|string|in:Clean,Salvage,Rebuilt,Not actual mileage,Manufacturer buyback',
+            'title_status' => 'required|string',
             'reserve_price' => 'required|boolean',
             'price_range' => $request->reserve_price ? 'required|numeric|min:0' : 'nullable|numeric|min:0',
             'engine' => 'required|string|max:100',
@@ -96,9 +97,9 @@ class AuctionController extends Controller
             'media.*' => 'file|mimes:jpeg,png,jpg,gif,svg,avi,mpeg,mov,mp4|max:20480', // 20MB max per file
         ];
 
-        // Validate request
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
+            Log::error('Validation failed', ['errors' => $validator->errors()]);
             return response()->json([
                 'success' => false,
                 'errors' => $validator->errors()
@@ -108,8 +109,7 @@ class AuctionController extends Controller
         try {
             DB::beginTransaction();
 
-            // Create new Auction instance
-            $auction = new Auction([
+           $auction = new Auction([
                 'full_name' => $request->full_name,
                 'phone' => $request->phone,
                 'vin_number' => $request->vin_number,
@@ -138,11 +138,9 @@ class AuctionController extends Controller
                 'interior_color' => $request->interior_color,
                 'ownership_history' => $request->ownership_history,
             ]);
-
-            // Associate auction with user and save
             $auction = $user->auctions()->save($auction);
+            Log::info('Auction created', ['auction_id' => $auction->id]);
 
-            // Handle media uploads
             if ($request->hasFile('media')) {
                 foreach ($request->file('media') as $media) {
                     $extension = $media->getClientOriginalExtension();
@@ -150,10 +148,9 @@ class AuctionController extends Controller
                         ? 'images/auctions'
                         : 'videos/auctions';
 
-                    // Custom upload function (assumed to be defined elsewhere)
                     $url = uploadImage($media, $path);
+                    Log::info('Media uploaded', ['url' => $url]);
 
-                    // Save to appropriate gallery
                     $galleryModel = in_array($extension, ['jpeg', 'png', 'jpg', 'gif', 'svg'])
                         ? AuctionImageGallery::class
                         : AuctionVideoGallery::class;
@@ -163,15 +160,15 @@ class AuctionController extends Controller
             }
 
             DB::commit();
-
             return response()->json([
                 't-success' => true,
                 'message' => 'Auction created successfully'
             ], 200);
         } catch (Exception $e) {
             DB::rollback();
+            Log::error('Auction creation failed', ['error' => $e->getMessage(), 'trace' => $e->getTraceAsString()]);
             return response()->json([
-                't-error' => false,
+                't-error' => true,
                 'message' => 'Failed to create auction: ' . $e->getMessage()
             ], 500);
         }

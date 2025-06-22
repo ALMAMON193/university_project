@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -27,21 +27,21 @@ return new class extends Migration
             $table->string('make');
             $table->string('model');
 
-            $table->enum('transmission', ['Manual Transmission', 'Automatic Transmission', 'Continuously Variable Transmission', 'Dual-Clutch Transmission'])->default('Manual Transmission');
+            $table->string('transmission');
             $table->integer('mileage');
             $table->string('equipment'); // equipment with the car
             $table->boolean('modify')->default(false); // is there any modification
             $table->text('modify_text')->nullable(); // describe the modifications
             $table->boolean('flaw')->default(false); // does the car have flaw?
             $table->text('flaw_text')->nullable(); // what flaw describe
-            $table->enum('location', ['Dhaka', 'Chattogram', 'Khulna', 'Rajshahi', 'Sylhet', 'Rangpur', 'Barisal', 'Mymensingh']);
+            $table->string('location');
             $table->boolean('sale_elsewhere')->default(false);
-            $table->enum('titled_location', ['Dhaka', 'Chattogram', 'Khulna', 'Rajshahi', 'Sylhet', 'Rangpur', 'Barisal', 'Mymensingh']);
+            $table->string('titled_location');
             $table->unsignedBigInteger('state_id')->default(1); // state id from the state table
             $table->foreign('state_id')->references('id')->on('states');
 
             $table->boolean('on_my_name')->default(true); // does this car registered on my name
-            $table->enum('title_status', ['Clean', 'Salvage', 'Reduilt', 'Not actual mileage', 'Manufacturer buyback']); // car title status
+            $table->string('title_status'); // car title status
 
             $table->boolean('reserve_price')->default(false); // do I want to set a reserve price
             $table->string('price_range')->nullable(); // if I want set a price range
