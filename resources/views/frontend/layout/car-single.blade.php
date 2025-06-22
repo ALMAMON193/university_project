@@ -387,7 +387,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <livewire:comments :model="$auction" />
+                            {{-- <livewire:comments :model="$auction" /> --}}
                         </div>
                     </div>
                     <div class="col-xxl-6 col-lg-7 mt_30">
