@@ -49,10 +49,7 @@ class AuctionController extends Controller
         return view('frontend.layout.auction', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-      public function create(Request $request)
+    public function create(Request $request)
     {
         Log::info('Auction creation attempt', ['user_id' => auth()->id(), 'input' => $request->all()]);
 
@@ -66,7 +63,7 @@ class AuctionController extends Controller
         }
 
         $rules = [
-           'full_name' => 'required|string|max:255',
+            'full_name' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
             'vin_number' => 'required|string|max:17',
             'year' => 'required|numeric|min:1900|max:' . date('Y'),
@@ -109,7 +106,7 @@ class AuctionController extends Controller
         try {
             DB::beginTransaction();
 
-           $auction = new Auction([
+            $auction = new Auction([
                 'full_name' => $request->full_name,
                 'phone' => $request->phone,
                 'vin_number' => $request->vin_number,
