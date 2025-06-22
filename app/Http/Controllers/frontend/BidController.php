@@ -16,11 +16,10 @@ class BidController extends Controller
     // create a bid
     public function create(Request $request)
     {
-
         $user = auth()->user();
 
         if ($user->email_verified_at == null) {
-            return redirect()->back()->with('t-error', 'Please vefiry your email address');
+            return redirect()->back()->with('t-error', 'Please verify your email address');
         }
 
         $input = $request->validate([
@@ -30,16 +29,16 @@ class BidController extends Controller
             'bid' => 'Please enter a valid bid amount'
         ]);
 
-        // finding a bid under a user id
+        // Finding a bid under a user id
         $bid = Bid::where('user_id', auth()->user()->id)->where('auction_id', $input['auction_id'])->first();
 
         // Retrieve the highest bid for the specified auction_id
         $auction = Auction::findOrFail($request->auction_id);
         $highest_bid = $auction->maxBid();
 
-        // check if the amount is greater than highest bid
+        // Check if the amount is greater than highest bid
         if ($request->bid < $highest_bid) {
-            return redirect()->back()->with('t-error', "You can't bid lower then the current highest bid");
+            return redirect()->back()->with('t-error', "You can't bid lower than the current highest bid");
         } else if ($request->bid == $highest_bid) {
             return redirect()->back()->with('t-error', "You can't bid same as the current highest bid");
         } else if ((float) $highest_bid + 50 > (float) $input['bid']) {
@@ -53,30 +52,30 @@ class BidController extends Controller
             // Additional fields if any
         ]);
 
-
         if ($bid !== null) {
-            // checking the eligible for bidding
+            // Checking the eligibility for bidding
             $balance = $user->balance->balance;
             $two_percent_of_bid_amount = ((float) $input['bid'] * 2) / 100;
-            // dd($two_percent_of_bid_amount);
-            // dd($two_percent_of_bid_amount, $balance);
+
             if ($balance < $two_percent_of_bid_amount) {
                 return redirect()->back()->with('t-error', 'You don\'t have enough balance to bid');
             }
 
             try {
                 DB::beginTransaction();
-                // deleting the existing bid
+                // Deleting the existing bid
                 $bid->delete();
-                // saving the bid
+                // Saving the bid
                 $user->bids()->save($newBid);
-                // check if the biding time less than 1 min
+                // Deduct the bid amount from user balance
+                $user->balance->balance -= (float) $input['bid'];
+                $user->balance->save();
+                // Check if the bidding time is less than 1 minute
                 $currentTime = Carbon::now();
-
                 $auctionEnd = Carbon::parse($auction->end);
-                // checking the difference between minutes
+                // Checking the difference between minutes
                 $differenceInMinutes = $currentTime->diffInMinutes($auctionEnd, false);
-                // updating the minute with 1 minutes
+                // Updating the minute with 1 minute
                 if ($differenceInMinutes <= 1) {
                     $auction->end = $auctionEnd->addMinutes(1);
                     $auction->save();
@@ -94,10 +93,15 @@ class BidController extends Controller
                 if ($balance < $two_percent_of_bid_amount) {
                     return redirect()->back()->with('t-error', 'You don\'t have enough balance to bid');
                 }
+                DB::beginTransaction();
                 $user->bids()->save($newBid);
+                // Deduct the bid amount from user balance
+                $user->balance->balance -= (float) $input['bid'];
+                $user->balance->save();
+                DB::commit();
             } catch (Exception $e) {
-                //                dd($e->getMessage());
-                return redirect()->back()->with('t-error', $e->getMessage("Something went wrong...!"));
+                DB::rollBack();
+                return redirect()->back()->with('t-error', $e->getMessage());
             }
         }
 
@@ -111,8 +115,6 @@ class BidController extends Controller
                 $eventData
             )
         );
-
-
         return redirect()->back()->with('t-success', 'Bid placed successfully..');
     }
 }
